@@ -2,24 +2,24 @@ package problemdomain;
 /**
  * This is a test!
  * @author liamm
- * @version 1.0
+ * @version 1.1
  */
 public class Periodic extends Book {
 	private char frequency;
 
 	/**
-	 * 
+	 * Constructor calls super no inputs.
 	 */
 	public Periodic() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	/**
-	 * @param isbn
-	 * @param callNumber
-	 * @param total
-	 * @param title
+	 * @param isbn of book.
+	 * @param callNumber of book.
+	 * @param total of how many books are left.
+	 * @param title of book.
+	 * @param frequency of book.
 	 */
 	public Periodic(String isbn, String callNumber, int total, int title, char frequency) {
 		super(isbn, callNumber, total, title);
@@ -27,14 +27,14 @@ public class Periodic extends Book {
 	}
 
 	/**
-	 * @return the frequency
+	 * @return the frequency.
 	 */
 	public char getFrequency() {
 		return frequency;
 	}
 
 	/**
-	 * @param frequency the frequency to set
+	 * @param frequency the frequency to set.
 	 */
 	public void setFrequency(char frequency) {
 		this.frequency = frequency;
