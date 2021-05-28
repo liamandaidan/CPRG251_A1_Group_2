@@ -3,7 +3,7 @@ package problemdomain;
 /**
  * This is a test!
  * @author liamm
- * @version 1.2
+ * @version 1.3
  */
 
 public class Book {
@@ -22,9 +22,10 @@ public class Book {
 	}
 	/**
 	 * @param isbn of book is a String
-	 * @param callNumber 
-	 * @param total
-	 * @param title
+	 * @param callNumber is a String
+	 * @param available is an int, with the number of books available
+	 * @param total is an int
+	 * @param title is an int
 	 */
 	public Book(String isbn, String callNumber, int available, int total, int title) {
 		this.isbn = isbn;

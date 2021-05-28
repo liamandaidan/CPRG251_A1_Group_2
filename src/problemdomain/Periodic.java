@@ -2,7 +2,7 @@ package problemdomain;
 /**
  * This is a test!
  * @author liamm
- * @version 1.2
+ * @version 1.3
  */
 public class Periodic extends Book {
 	private char frequency;
@@ -43,8 +43,10 @@ public class Periodic extends Book {
 
 	@Override
 	public String toString() {
-		return "Periodic Book: frequency=" + frequency + ", " + super.toString();
+		return "Periodic: frequency=" + frequency + ", " + super.toString();
 	}
+
+
 	
 	
 }
