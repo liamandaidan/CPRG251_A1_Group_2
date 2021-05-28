@@ -5,5 +5,5 @@ package problemdomain;
  *
  */
 public class Periodic extends Book {
-
+	private char frequency;
 }
