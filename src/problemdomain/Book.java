@@ -2,6 +2,8 @@ package problemdomain;
 
 public class Book {
 	
-	//this is my first change
+	//This is a test comment
+	//this is a new comment from mike
+
 
 }
