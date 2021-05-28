@@ -11,6 +11,30 @@ public class PaperBack extends Book {
 	
 	
 	/**
+	 * constructor based on superclass
+	 */
+	public PaperBack()
+	{
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	/**
+	 * @param isbn
+	 * @param callNumber
+	 * @param total
+	 * @param title
+	 * @param authors
+	 * @param year
+	 * @param genre
+	 */
+	public PaperBack(String isbn, String callNumber, int total, int title, String authors, int year, char genre)
+	{
+		super(isbn, callNumber, total, title);
+		this.authors = authors;
+		this.year = year;
+		this.genre = genre;
+	}
+	/**
 	 * @return the authors
 	 */
 	public String getAuthors()
@@ -51,6 +75,13 @@ public class PaperBack extends Book {
 	public void setGenre(char genre)
 	{
 		this.genre = genre;
+	}
+	@Override
+	public String toString()
+	{
+		return "PaperBack getAuthors()=" + getAuthors() + ", getYear()=" + getYear() + ", getGenre()=" + getGenre()
+				+ ", getIsbn()=" + getIsbn() + ", getCallNumber()=" + getCallNumber() + ", getTotal()=" + getTotal()
+				+ ", getTitle()=" + getTitle() + ", toString()=" + super.toString();
 	}
 	
 	
