@@ -10,7 +10,6 @@ public class Application {
 
 		System.out.println("Ben wrote this");
 		System.out.println("This is Liam");
-
 	}
 
 }
