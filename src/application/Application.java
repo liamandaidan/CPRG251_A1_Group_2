@@ -8,6 +8,8 @@ public class Application {
 		// TODO Auto-generated method stub
 		System.out.println("Hello World!");
 		System.out.println("This is Liam");
+		System.out.println("Ben wrote this");
+
 	}
 
 }
