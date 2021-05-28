@@ -3,7 +3,7 @@ package problemdomain;
 /**
  * This is a test!
  * @author liamm
- * @version 1.1
+ * @version 1.2
  */
 
 public class Book {
