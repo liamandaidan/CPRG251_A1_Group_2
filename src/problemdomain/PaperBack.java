@@ -1,7 +1,10 @@
 package problemdomain;
 
+/**
+ * @author bdavi
+ * */
 public class PaperBack extends Book {
-	//this is a Ben comment
+	
 	private String authors;
 	private int year;
 	private char genre;
