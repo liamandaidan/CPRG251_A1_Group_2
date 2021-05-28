@@ -1,26 +1,32 @@
 package problemdomain;
-
+/**
+ * @author Robyn
+ * @version 05/28/21
+ */
 public class CookBook extends Book {
-		
+
 	private String publisher;
 	private char diet;
 	
 	/**
-	 * 
+	 * CookBook constructor no args
 	 */
 	public CookBook() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 	/**
-	 * @param isbn
-	 * @param callNumber
-	 * @param total
-	 * @param title
+	 * @param isbn is the book unique number
+	 * @param callNumber is the book address
+	 * @param available number of books
+	 * @param total number of books in stock
+	 * @param title of book
+	 * @param publisher of book
+	 * @param diet category
 	 */
-	public CookBook(String isbn, String callNumber, int total, int title) {
-		super(isbn, callNumber, total, title);
-		// TODO Auto-generated constructor stub
+	public CookBook(String isbn, String callNumber,int available, int total, int title, String publisher, char diet) {
+		super(isbn, callNumber, available, total, title);
+		this.publisher = publisher;
+		this.diet = diet;
 	}
 	/**
 	 * @param publisher
