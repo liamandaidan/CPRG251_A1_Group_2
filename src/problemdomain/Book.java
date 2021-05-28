@@ -29,8 +29,9 @@ public class Book {
 	public Book(String isbn, String callNumber, int available, int total, int title) {
 		this.isbn = isbn;
 		this.callNumber = callNumber;
+		this.available = available;
 		this.total = total;
-		this.title = title;
+		this.title = title;		
 	}
 	/**
 	 * @return the isbn
