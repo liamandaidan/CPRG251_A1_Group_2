@@ -1,12 +1,39 @@
 package problemdomain;
 
+/**
+ * @author bdavi
+ * */
 public class PaperBack extends Book {
-	//this is a Ben comment
+	
 	private String authors;
 	private int year;
 	private char genre;
 	
 	
+	/**
+	 * constructor based on superclass
+	 */
+	public PaperBack()
+	{
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	/**
+	 * @param isbn
+	 * @param callNumber
+	 * @param total
+	 * @param title
+	 * @param authors
+	 * @param year
+	 * @param genre
+	 */
+	public PaperBack(String isbn, String callNumber, int available, int total, int title, String authors, int year, char genre)
+	{
+		super(isbn, callNumber, available, total, title);
+		this.authors = authors;
+		this.year = year;
+		this.genre = genre;
+	}
 	/**
 	 * @return the authors
 	 */
@@ -48,6 +75,13 @@ public class PaperBack extends Book {
 	public void setGenre(char genre)
 	{
 		this.genre = genre;
+	}
+	@Override
+	public String toString()
+	{
+		return "PaperBack getAuthors()=" + getAuthors() + ", getYear()=" + getYear() + ", getGenre()=" + getGenre()
+				+ ", getIsbn()=" + getIsbn() + ", getCallNumber()=" + getCallNumber() + ", getTotal()=" + getTotal()
+				+ ", getTitle()=" + getTitle() + ", toString()=" + super.toString();
 	}
 	
 	
