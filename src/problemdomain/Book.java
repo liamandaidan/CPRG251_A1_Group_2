@@ -1,29 +1,32 @@
 package problemdomain;
 
-/**	
- * 
+/**
+ * This is a test!
+ * @author liamm
+ * @version 1.1
  */
 
 public class Book {
 	
 	private String isbn;
 	private String callNumber;
+	private int available;
 	private int total;
 	private int title;
 	/**
-	 * 
+	 * Book constructor no args.
 	 */
 	public Book() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 	/**
-	 * @param isbn
-	 * @param callNumber
+	 * @param isbn of book is a String
+	 * @param callNumber 
 	 * @param total
 	 * @param title
 	 */
-	public Book(String isbn, String callNumber, int total, int title) {
+	public Book(String isbn, String callNumber, int available, int total, int title) {
 		this.isbn = isbn;
 		this.callNumber = callNumber;
 		this.total = total;
@@ -77,10 +80,24 @@ public class Book {
 	public void setTitle(int title) {
 		this.title = title;
 	}
+	/**
+	 * @return the available
+	 */
+	public int getAvailable() {
+		return available;
+	}
+	/**
+	 * @param available the available to set
+	 */
+	public void setAvailable(int available) {
+		this.available = available;
+	}
 	@Override
 	public String toString() {
-		return "Book: isbn=" + isbn + ", callNumber=" + callNumber + ", total=" + total + ", title=" + title;
+		return "Book: isbn=" + isbn + ", callNumber=" + callNumber + ", available=" + available + ", total=" + total
+				+ ", title=" + title;
 	}
+
 	
 
 	
