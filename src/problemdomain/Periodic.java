@@ -2,7 +2,7 @@ package problemdomain;
 /**
  * This is a test!
  * @author liamm
- * @version 1.1
+ * @version 1.2
  */
 public class Periodic extends Book {
 	private char frequency;
@@ -17,12 +17,13 @@ public class Periodic extends Book {
 	/**
 	 * @param isbn of book.
 	 * @param callNumber of book.
+	 * @param available of book.
 	 * @param total of how many books are left.
 	 * @param title of book.
 	 * @param frequency of book.
 	 */
-	public Periodic(String isbn, String callNumber, int total, int title, char frequency) {
-		super(isbn, callNumber, total, title);
+	public Periodic(String isbn, String callNumber,int available, int total, int title, char frequency) {
+		super(isbn, callNumber, available, total, title);
 		this.frequency = frequency;
 	}
 
