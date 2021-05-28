@@ -2,6 +2,7 @@ package problemdomain;
 
 /**
  * @author bdavi
+ * @version 1.1
  * */
 public class PaperBack extends Book {
 	
@@ -82,8 +83,8 @@ public class PaperBack extends Book {
 	@Override
 	public String toString()
 	{
-		return "PaperBack authors=" + authors + ", year=" + year + ", genre=" + genre + ", getIsbn()=" + getIsbn()
-				+ ", Call Number=" + getCallNumber() + ", Available=" + getAvailable()  + ", Total=" + getTotal() + ", Title=" + getTitle();
+		return "PaperBack: authors=" + authors + ", year=" + year + ", genre=" + genre + ", toString()="
+				+ ", " + super.toString();
 	}
 	
 	
