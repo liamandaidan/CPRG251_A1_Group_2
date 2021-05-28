@@ -18,9 +18,11 @@ public class PaperBack extends Book {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
 	/**
 	 * @param isbn
 	 * @param callNumber
+	 * @param available
 	 * @param total
 	 * @param title
 	 * @param authors
@@ -34,6 +36,7 @@ public class PaperBack extends Book {
 		this.year = year;
 		this.genre = genre;
 	}
+
 	/**
 	 * @return the authors
 	 */
@@ -79,9 +82,8 @@ public class PaperBack extends Book {
 	@Override
 	public String toString()
 	{
-		return "PaperBack getAuthors()=" + getAuthors() + ", getYear()=" + getYear() + ", getGenre()=" + getGenre()
-				+ ", getIsbn()=" + getIsbn() + ", getCallNumber()=" + getCallNumber() + ", getTotal()=" + getTotal()
-				+ ", getTitle()=" + getTitle() + ", toString()=" + super.toString();
+		return "PaperBack authors=" + authors + ", year=" + year + ", genre=" + genre + ", getIsbn()=" + getIsbn()
+				+ ", Call Number=" + getCallNumber() + ", Available=" + getAvailable()  + ", Total=" + getTotal() + ", Title=" + getTitle();
 	}
 	
 	
