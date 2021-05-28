@@ -1,0 +1,75 @@
+9791149311508;050;0;5;Men's Health;M
+9795804215224;813.52 STE;3;6;Of Mice and Men;John Steinbeck;1937;D
+9797121081902;641.6 HAZ;6;14;Essentials of Classic Italian Cooking;Marcella Hazan;I
+9793906396384;813.3 MEL;3;5;Moby-Dick;Herman Melville;1851;A
+9797641065604;301;3;8;Sociology (9th edition);John J. Macionis, Linda M. Gerber;2017;E
+9791665089059;070;0;5;Metro;D
+9785693678279;070;0;5;Canmore Leader;W
+9796542512637;380;7;10;Purchasing and Supply Chain Management (6th edition);Robert Monczka, Robert Handfield, Larry Giunipero, James Patterson;2015;E
+9795333191914;823.914 LOW;5;10;The Giver;Lois Lowry;1993;S
+9780353503526;517;13;14;Pre-Calculus 11 (1st edition);Scott Carlson, Barb Gajdos, Andrea Hook, Emily Kalwarowsky, Antonietta Lenjosek;2011;E
+9798269734453;641.5 RAM;5;13;Gordon Ramsay's Home Cooking;Gordon Ramsay;N
+9796811509498;052;0;5;Maclean's;W
+9797868577614;822.33 SHA;10;11;Romeo and Juliet;William Shakespeare;1591;C
+9784076113987;823.914 LEE;6;9;To Kill a Mockingbird;Harper Lee;1960;C
+9785593137012;641.6 LIV;14;15;Diabetic Living The Ultimate Diabetes Cookbook;Diabetic Living;D
+9787118283129;070;0;5;National Post;D
+9797438643886;823.914 BRA;0;11;Fahrenheit 451;Ray Bradbury;1953;D
+9791426709073;641.6 TIL;4;9;101 Asian Dishes You Need to Cook Before You Die;Jet Tila;I
+9787575910460;813.54 SEU;0;11;The Cat in the Hat;Dr. Seuss;P
+9787518397792;641.6 DOG;4;5;From Crook to Cook;Snoop Dogg;N
+9792890959902;641.6;0;7;The Hungry Student Vegetarian;Spruce;V
+9794478619116;813.54;1;12;A Game of Thrones;George R.R. Martin;1996;F
+9783787458479;071;0;5;The New York Times;D
+9787330937664;823.914 KES;10;14;One Flew Over the Cuckoo's Nest;Ken Kesey;1962;D
+9782434208498;051;0;5;Wired;M
+9787196778104;823.9;8;11;The Hobbit;J. R. R. Tolkien;1937;A
+9791877339928;051;0;5;People;W
+9792389858150;782.42083;3;11;The Wonky Donkey;Craig Smith, Katz Cowley;P
+9781268619524;823.912 ORW;10;12;Nineteen Eighty-Four;George Orwell;1949;C
+9799152055129;070;0;5;Daily Mail;D
+9798987321454;823.914;9;14;Harry Potter and the Sorcerer's Stone;J. K. Rowling;2003;F
+9796299806225;813.6 WEI;1;9;The Martian;Andy Weir;2011;S
+9786404407409;071;0;5;The Globe and Mail;D
+9786732256038;050;0;5;Modern Dog;Q
+9794025081038;050;0;5;MAD;B
+9789732036570;813.6;4;12;There's No Place Like Space;Tish Rabe, Aristides Ruiz;E
+9794656793133;641.6 BAT;5;14;Joon: Persian Cooking Made Simple;Najmieh Batmanglij;I
+9797669173657;796.522092 KRA;5;9;Into Thin Air;Jon Krakauer;1997;A
+9783194155855;517;12;14;Precalculus: Mathematics for Calculus (7th edition);James Stewart, Lothar Redlin, Saleem Watson;2015;E
+9783607080033;641.6;6;15;Gluten-Free Artisan Bread in Five Minutes a Day;Jeff Hertzberg, Zoe Francois;G
+9799828353573;641 LID;0;11;Oh She Glows Every Day;Angela Liddon;V
+9799748387597;343.71;3;14;Introduction to Federal Income Taxation in Canada (39th edition);James Stewart, Lothar Redlin, Saleem Watson;2018;E
+9788219308544;005.7 CAS;5;7;Oracle 12c: SQL (3rd edition);Joan Casteel;2015;E
+9788859247869;071;0;5;The Boston Globe;D
+9793281370757;813.54 HER;3;6;Dune;Frank Herbert;1965;S
+9790444322479;070;0;5;Lethbridge Sun Times;W
+9782092530030;813.6;1;14;I Need a New Butt!;Dawn McMillan, Ross Kinnaird;E
+9782346146918;050;0;5;Dogster;B
+9783680508561;813.54 BLU;4;15;Tales of a Fourth Grade Nothing;Judy Blume;C
+9784964436051;821.914 AND;9;14;Giraffes Can't Dance;Giles Andreae;P
+9798159346810;813.6;4;5;Coyote Tales;Thomas King, Byron Eggenschwiler;C
+9781784556280;813.54 SEU;3;14;Green Eggs and Ham;Dr. Seuss;P
+9798447362010;813.54 PIL;0;6;The Adventures of Captain Underpants;Dav Pilkey;C
+9780957220737;823.914 MIL;0;10;Death of a Salesman;Arthur Miller;1949;D
+9785876892430;813.6 MEM;5;13;Big Shark, Little Shark;Anna Membrino;E
+9797010982167;005.1 GAD;3;9;Starting Out with Java (7th edition);Tony Gaddis;2018;E
+9793441241026;823.914 GOL;3;5;Lord of the Flies;William Golding;1954;D
+9784049182965;813.6 COL;7;11;The Hunger Games;Suzanne Collins;2008;S
+9791111299254;005.8 SEI;0;6;Gray Hat Python (1st edition);Justin Seitz;2009;E
+9781749080263;641.5;7;10;The Complete Cooking for Two Cookbook;America's Test Kitchen;N
+9782232375484;822.33 SHA;6;6;Hamlet;William Shakespeare;1602;C
+9790634328045;813.54 MAR;4;12;Life of Pi;Yann Martel;2001;A
+9792662264098;051;0;5;Time;W
+9789917278351;813.6;7;7;Monsters and Mold;Asia Citro, Marion Lindsay;C
+9781059687282;641.6 GUZ;5;11;Nopalito;Gonzalo Guzman;I
+9796356055276;813.52;0;8;The Great Gatsby;F. Scott Fitzgerald;1925;D
+9796179880338;051;0;5;Rolling Stone;M
+9789560996916;005.4;5;8;Operating System Concepts (9th edition);Abraham Silberschatz, Peter B. Galvin, Greg Gagne;2012;E
+9780631087939;070;0;5;Coffee News;W
+9786885660850;813.54;4;6;I Spy A Dinosaur's Eye;Jean Marzollo, Walter Wick;E
+9788354199274;823.912 TOL;7;8;The Lord of The Rings;J.R.R. Tolkien;1955;F
+9788894437768;051;0;5;National Geographic;M
+9784071734552;641.6;0;6;The Gluten-Free Cookbook;DK;G
+9787376373648;051;0;5;Vogue;M
+9797028940715;843.912;3;5;The Little Prince;Antoine de Saint-Exupery;1943;F
