@@ -204,7 +204,7 @@ public class Driver {
 	 * This method will prompt the user to enter a title. 
 	 * It is case-insensitive. Will display books in table form.
 	 * @author Liam
-	 * @version 1.1
+	 * @version 1.2
 	 */ 
 	public void findBookTitle() {
 		//Print to user read In From user
@@ -213,7 +213,7 @@ public class Driver {
 		String title = input.nextLine().toLowerCase();
 		//Compare to the rest of the bookList. Case insensitive. Save the index Number for later.
 		for(int i = 0; i < bookList.size(); i++) {
-			if(bookList.get(i).getTitle().toLowerCase().equals(title)) {
+			if(bookList.get(i).getTitle().toLowerCase().contains(title)) {
 				System.out.println(bookList.get(i));
 			}			
 		}
