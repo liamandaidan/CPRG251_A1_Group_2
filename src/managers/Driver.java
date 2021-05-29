@@ -201,14 +201,19 @@ public class Driver {
 	}
 
 	/**
-	 * 
+	 * This method will prompt the user to enter a title. 
+	 * It is case-insensitive. Will display books in table form.
 	 * @author Liam
-	 * @version 1.0
+	 * @version 1.1
 	 */ 
 	public void findBookTitle() {
+		//Print to user read In From user
 		Scanner input = new Scanner(System.in);
 		System.out.print("Enter title to search for: ");
 		String title = input.nextLine().toLowerCase();
+		//Compare to the rest of the bookList. Case insensitive.
+		
+		//Display the rest in a nice form see assignment desc
 	}
 
 	/**
