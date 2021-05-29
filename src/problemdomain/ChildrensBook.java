@@ -30,7 +30,7 @@ public class ChildrensBook extends Book {
 	 * @param authors    the authors of the book
 	 * @param format     The type of childrens book
 	 */
-	public ChildrensBook(String isbn, String callNumber, int available, int total, int title, String authors,
+	public ChildrensBook(String isbn, String callNumber, int available, int total, String title, String authors,
 			char format) {
 		super(isbn, callNumber, available, total, title);
 		this.authors = authors;

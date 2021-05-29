@@ -12,7 +12,7 @@ public class Book {
 	private String callNumber;
 	private int available;
 	private int total;
-	private int title;
+	private String title;
 	/**
 	 * Book constructor no args.
 	 */
@@ -27,7 +27,7 @@ public class Book {
 	 * @param total is an int
 	 * @param title is an int
 	 */
-	public Book(String isbn, String callNumber, int available, int total, int title) {
+	public Book(String isbn, String callNumber, int available, int total, String title) {
 		this.isbn = isbn;
 		this.callNumber = callNumber;
 		this.available = available;
@@ -73,13 +73,13 @@ public class Book {
 	/**
 	 * @return the title
 	 */
-	public int getTitle() {
+	public String getTitle() {
 		return title;
 	}
 	/**
 	 * @param title the title to set
 	 */
-	public void setTitle(int title) {
+	public void setTitle(String title) {
 		this.title = title;
 	}
 	/**

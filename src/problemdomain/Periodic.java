@@ -22,7 +22,7 @@ public class Periodic extends Book {
 	 * @param title of book.
 	 * @param frequency of book.
 	 */
-	public Periodic(String isbn, String callNumber,int available, int total, int title, char frequency) {
+	public Periodic(String isbn, String callNumber,int available, int total, String title, char frequency) {
 		super(isbn, callNumber, available, total, title);
 		this.frequency = frequency;
 	}
