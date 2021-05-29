@@ -201,11 +201,14 @@ public class Driver {
 	}
 
 	/**
+	 * 
 	 * @author Liam
-	 */
+	 * @version 1.0
+	 */ 
 	public void findBookTitle() {
-		// TODO Auto-generated method stub
-
+		Scanner input = new Scanner(System.in);
+		System.out.print("Enter title to search for: ");
+		String title = input.nextLine().toLowerCase();
 	}
 
 	/**
