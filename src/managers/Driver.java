@@ -23,6 +23,12 @@ public class Driver {
 	public Driver() {
 		bookList = new ArrayList<Book>();
 		loadBooks();
+		
+		//the following 4 lines are code testing the function of the checkOutBook method
+				//checkOutBook("9789560996916");//operating systems concepts has 5 available out of 8 to start
+				//checkOutBook("9796356055276");//the great gatsby has 0 available out of 8
+				//checkOutBook("9792662264098");//Time magazine is a periodical and cannot be checked out
+				//checkOutBook("2387984712697");//testing an isbn that doesn't exist
 		displayMenu();
 
 		// The follow code is to test that all of the books were added
@@ -31,6 +37,7 @@ public class Driver {
 		 * for(Book b: bookList){ System.out.println(b.getTitle()); }
 		 * System.out.println(bookList.size());
 		 */
+		
 		
 	}
 
@@ -199,25 +206,39 @@ public class Driver {
 	 * @author Benson
 	 */
 	public void checkOutBook(String isbn) {
-		// TODO Auto-generated method stub
-		//take argument of book ISBN no. and locate that item in the arraylist
-		//check that object's available count. If the count is 0, deny the request. If the count is 1 or more, reduce the count by 1 and display an approval message
-		/*	
-		 * for(Book theBook: bookList)
-		 * {
-		 * 		String bookCode = theBook.getIsbn();
-		 * 		if(bookCode.equals(isbn)
-		 * 		{
-		 * 			if(theBook.getAvailable() >= 1)
-		 * 			{
-		 * 				theBook.setAvailable(theBook.getAvailable() - 1);
-		 * 			} else
-		 * 			{
-		 * 				System.out.println("Sorry, there are no more copies of this book available to check out. Please try another book.");
-		 * 			}
-		 * 		}
-		 * }
-		 * */
+
+		if(bookExists(isbn))
+		{
+		 for(Book theBook: bookList)
+		 {
+		 	String bookCode = theBook.getIsbn();
+		 	if(bookCode.equals(isbn))
+		 		{
+		 			if(bookType(bookCode) != 3)
+		 			{
+		 /*test code*///System.out.println(theBook.toString());
+		 			if(theBook.getAvailable() >= 1)
+		 			{
+		 				theBook.setAvailable(theBook.getAvailable() - 1);
+		 				System.out.println("Book checked out successfully. Enjoy your reading!");
+		 /*test code*///System.out.println(theBook.toString());
+		 			} else
+		 			{
+		  				System.out.println("Sorry, there are no more copies of this book available to check out. Please try another book.");
+		  			}
+		 			} else
+		 			{
+		 				System.out.println("Sorry, you can't check out periodicals.");
+		 			}
+		 		}
+		 }
+		} else
+		{
+		 	System.out.println("That ISBN does not exist in our system. Please enter a valid ISBN.");
+		}
+		  
+		 
+		 
 	}
 
 	/**
@@ -277,6 +298,26 @@ public class Driver {
 	public void saveBook() {
 		// TODO Auto-generated method stub
 
+	}
+	/**Method to check if a book exists or not
+	 * 
+	 * @author Benson
+	 * 
+	 * @param String
+	 * @return boolean
+	 * */
+	public boolean bookExists(String isbn)
+	{
+		for(int i = 0; i < bookList.size(); i++)
+		{
+			if(bookList.get(i).getIsbn().equals(isbn))
+			{
+				/*test line*///System.out.println("true");
+				return true;
+			}
+		}
+		/*test line*///System.out.println("false");
+		return false;
 	}
 
 }
