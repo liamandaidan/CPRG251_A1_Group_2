@@ -3,7 +3,8 @@ package problemdomain;
 /**
  * This is a test!
  * @author liamm
- * @version 1.3
+ * @version 1.5
+ * ChangeLog: Updated toString Method to display nicely using String.format
  */
 
 public class Book {
@@ -96,8 +97,10 @@ public class Book {
 	}
 	@Override
 	public String toString() {
-		return "Book: isbn=" + isbn + ", callNumber=" + callNumber + ", available=" + available + ", total=" + total
-				+ ", title=" + title;
+		
+		return String.format("%-15s\t%s","ISBN:",isbn)+ String.format("%-15s\t%s","\nCall Number:",callNumber) 
+		+ String.format("%-15s\t%s", "\nAvailable:", available) 
+		+ String.format("%-15s\t%s", "\nTotal:", total)+ String.format("%-15s\t%s\n", "\nTitle:", title);
 	}
 
 	

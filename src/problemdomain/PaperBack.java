@@ -83,8 +83,8 @@ public class PaperBack extends Book {
 	@Override
 	public String toString()
 	{
-		return "PaperBack: authors=" + authors + ", year=" + year + ", genre=" + genre + ", toString()="
-				+ ", " + super.toString();
+		return super.toString()+String.format("%-15s\t%s%n", "Authors:",this.authors)+String.format("%-15s\t%s%n", "Year:",this.year)
+	    +String.format("%-15s\t%s%n", "Genre:",this.genre);
 	}
 	
 	
