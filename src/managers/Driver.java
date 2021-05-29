@@ -44,7 +44,7 @@ public class Driver {
 		// Todo create menu
 
 		// From menu four functions to call
-		checkOutBook();
+		//checkOutBook();
 		findBookTitle();
 		displayBookType();
 		produceRandomBookList();
@@ -55,9 +55,26 @@ public class Driver {
 	/**
 	 *  @author Benson
 	 */
-	public void checkOutBook() {
+	public void checkOutBook(String isbn) {
 		// TODO Auto-generated method stub
-
+		//take argument of book ISBN no. and locate that item in the arraylist
+		//check that object's available count. If the count is 0, deny the request. If the count is 1 or more, reduce the count by 1 and display an approval message
+		/*	
+		 * for(Book theBook: bookList)
+		 * {
+		 * 		String bookCode = theBook.getIsbn();
+		 * 		if(bookCode.equals(isbn)
+		 * 		{
+		 * 			if(theBook.getAvailable() >= 1)
+		 * 			{
+		 * 				theBook.setAvailable(theBook.getAvailable() - 1);
+		 * 			} else
+		 * 			{
+		 * 				System.out.println("Sorry, there are no more copies of this book available to check out. Please try another book.");
+		 * 			}
+		 * 		}
+		 * }
+		 * */
 	}
 	/**
 	 *  @author Liam
