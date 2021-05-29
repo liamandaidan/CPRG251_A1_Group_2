@@ -3,7 +3,8 @@ package problemdomain;
 /**
  * This is a test!
  * @author liamm
- * @version 1.3
+ * @version 1.4
+ * ChangeLog: Updated toString Method to display nicely.
  */
 
 public class Book {
@@ -96,8 +97,8 @@ public class Book {
 	}
 	@Override
 	public String toString() {
-		return "Book: isbn=" + isbn + ", callNumber=" + callNumber + ", available=" + available + ", total=" + total
-				+ ", title=" + title;
+		return "ISBN:		      " + isbn + "\nCall Number:	" + callNumber + "\nAvailable:	      " + available 
+				+ "\nTotal:		" + total + "\nTitle:		" + title;
 	}
 
 	
