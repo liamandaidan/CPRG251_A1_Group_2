@@ -1,6 +1,8 @@
 package managers;
 
 import problemdomain.*;
+import tests.Scanner;
+
 import java.io.*;
 import java.util.*;
 
@@ -177,20 +179,88 @@ public class Driver {
 	}
 
 	/**
+	 * this displays the menu for the user to choose from
 	 * @author Robyn
 	 */
 	public void displayMenu() {
-		// Todo create menu
+	/*
+	 * // Todo create menu
+	 * 
+	 * // From menu four functions to call checkOutBook(); findBookTitle();
+	 * displayBookType(); produceRandomBookList(); // Save book and exit saveBook();
+	 */
+		
+		/**
+		 * @param option is selections made by user
+		 * @param isbnSelection is the isbn entered by user
+		 * @param bookTitle is the title of the book the user searches for
+		 * @param typeOfBook is the type of book the user enters
+		 * @param numOfRandomBooks is the number of books the user wants to randomly display
+		 * @param freqSelected is the frequency of the periodic book the user enters
+		 * 
+		 */
 
-		// From menu four functions to call
-		checkOutBook();
-		findBookTitle();
-		displayBookType();
-		produceRandomBookList();
-		// Save book and exit
-		saveBook();
+			/*
+			 * NEED A METHOD FOR displayPeriodicBook
+			 * */
 
-	}
+			int option;
+			int isbnSelection;
+			String bookTitle;
+			int typeOfBook;
+			int numOfRandomBooks;
+			char freqSelected;
+			
+			Scanner in = new Scanner (System.in);
+			
+			System.out.printf ("Welcome to the ABC Book Company: How may we assist you?%n" +
+					"1. Checkout Book%n" +
+					"2. Find Books by Title%n" +
+					"3. Display Books by Type%n" +
+					"4. Produce Random Book List%n" +
+					"5. Save & Exit%n%n" );
+
+			System.out.printf("Enter option: ");
+			option = in.nextInt();
+
+			while (option != 5) {
+				switch (option) {
+				case 1:
+					System.out.printf("Enter the ISBN of book: ");
+					isbnSelection = in.nextInt();
+					checkOutBook(isbnSelection); //use isbn entered to check out 
+					break;
+				case 2:
+					System.out.printf("Enter the title to search for: ");
+					bookTitle = in.nextLine();
+					findBookTitle(bookTitle); 
+					break;
+				case 3:
+					System.out.printf("#  Type%n" +
+							"1. Children's Books%n" +
+							"2. CookBooks%n" +
+							"3. Paperbacks%n" +
+							"4. Periodicals%n%n");
+					System.out.printf("Enter type of book: ");
+					typeOfBook = in.nextInt();
+					if(typeOfBook == 4){
+						System.out.printf("%nEnter a frequency (D for Daily, W for Weekly, "
+								+ "M for Monthly, B for Biweekly, or Q for Quarterly): ");
+						freqSelected = in.next().charAt(0);
+	                    displayPeriodicBook(freqSelected); //displayFrequency method needed! 
+					}
+					displayBookType(typeOfBook);
+					break;
+				case 4: 
+					System.out.printf("Enter number of books: ");
+					numOfRandomBooks = in.nextInt();
+					produceRandomBookList(numOfRandomBooks);
+					break;
+				}
+			}
+			savebook();
+		}
+
 
 	/**
 	 * @author Benson
