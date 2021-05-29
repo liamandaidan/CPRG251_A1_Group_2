@@ -30,7 +30,7 @@ public class PaperBack extends Book {
 	 * @param year
 	 * @param genre
 	 */
-	public PaperBack(String isbn, String callNumber, int available, int total, int title, String authors, int year, char genre)
+	public PaperBack(String isbn, String callNumber, int available, int total, String title, String authors, int year, char genre)
 	{
 		super(isbn, callNumber, available, total, title);
 		this.authors = authors;
