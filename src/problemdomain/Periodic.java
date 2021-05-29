@@ -2,7 +2,8 @@ package problemdomain;
 /**
  * This is a test!
  * @author liamm
- * @version 1.3
+ * @version 1.4
+ * Change log: updated toString to display better.
  */
 public class Periodic extends Book {
 	private char frequency;
@@ -43,7 +44,7 @@ public class Periodic extends Book {
 
 	@Override
 	public String toString() {
-		return "Periodic: frequency=" + frequency + ", " + super.toString();
+		return super.toString()+"\nFrequency:	      "+this.frequency;
 	}
 
 

@@ -150,8 +150,8 @@ public class Driver {
 	}
 
 	/**
-	 * Figures out what type of book it is
-	 * based on the last number
+	 * Figures out what type of book it is based on the last number
+	 * 
 	 * @param isbn Unique number about a book
 	 * @return book A number relating to book type
 	 */
@@ -211,13 +211,17 @@ public class Driver {
 		Scanner input = new Scanner(System.in);
 		System.out.print("Enter title to search for: ");
 		String title = input.nextLine().toLowerCase();
-		//Compare to the rest of the bookList. Case insensitive.
-		
-		//Display the rest in a nice form see assignment desc
+		//Compare to the rest of the bookList. Case insensitive. Save the index Number for later.
+		for(int i = 0; i < bookList.size(); i++) {
+			if(bookList.get(i).getTitle().toLowerCase().equals(title)) {
+				System.out.println(bookList.get(i));
+			}			
+		}
+		input.close();
 	}
 
 	/**
-	 * 
+	 * This will be used in the rest of the function to display book in a nice form.
 	 */
 	public void displayBookType() {
 		// TODO Auto-generated method stub
