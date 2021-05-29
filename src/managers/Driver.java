@@ -72,6 +72,8 @@ public class Driver {
 					break;
 				}
 			}
+			
+			load.close();
 		} catch (FileNotFoundException e) {
 			System.out.println("Did not read in file properly, restart the program, and check filepath of books.txt.");
 		}
