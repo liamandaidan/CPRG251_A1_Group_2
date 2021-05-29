@@ -23,7 +23,7 @@ public class CookBook extends Book {
 	 * @param publisher of book
 	 * @param diet category
 	 */
-	public CookBook(String isbn, String callNumber,int available, int total, int title, String publisher, char diet) {
+	public CookBook(String isbn, String callNumber,int available, int total, String title, String publisher, char diet) {
 		super(isbn, callNumber, available, total, title);
 		this.publisher = publisher;
 		this.diet = diet;
