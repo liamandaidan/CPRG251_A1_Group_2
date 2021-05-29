@@ -47,7 +47,7 @@ public class Driver {
 			while (load.hasNext()) {
 				String[] entry = load.nextLine().split(";");
 
-				// checkl the type of book
+				// checks the type of book
 				int type = bookType(entry[0]);
 
 				// creates the appropriate book
