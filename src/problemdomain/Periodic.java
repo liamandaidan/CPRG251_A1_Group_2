@@ -2,7 +2,7 @@ package problemdomain;
 /**
  * This is a test!
  * @author liamm
- * @version 1.4
+ * @version 1.5
  * Change log: updated toString to display better.
  */
 public class Periodic extends Book {
@@ -44,7 +44,7 @@ public class Periodic extends Book {
 
 	@Override
 	public String toString() {
-		return super.toString()+"\nFrequency:	      "+this.frequency;
+		return super.toString()+String.format("%-15s\t%s%n", "Frequency:",this.frequency);
 	}
 
 
