@@ -63,7 +63,7 @@ public class CookBook extends Book {
 	}
 	@Override
 	public String toString() {
-		return "CookBook: publisher=" + publisher + ", diet=" + diet + ", toString()=" + super.toString();
+		return super.toString()+String.format("%-15s\t%s%n", "Publisher:",this.publisher)+String.format("%-15s\t%s%n", "Diet:",this.diet);
 	}
 	
 
