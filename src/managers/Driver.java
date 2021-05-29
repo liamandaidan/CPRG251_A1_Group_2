@@ -72,7 +72,7 @@ public class Driver {
 					break;
 				}
 			}
-			
+
 			load.close();
 		} catch (FileNotFoundException e) {
 			System.out.println("Did not read in file properly, restart the program, and check filepath of books.txt.");
@@ -203,21 +203,23 @@ public class Driver {
 	}
 
 	/**
-	 * This method will prompt the user to enter a title. 
-	 * It is case-insensitive. Will display books in table form.
+	 * This method will prompt the user to enter a title. It is case-insensitive.
+	 * Will display books in table form.
+	 * 
 	 * @author Liam
 	 * @version 1.2
-	 */ 
+	 */
 	public void findBookTitle() {
-		//Print to user read In From user
+		// Print to user read In From user
 		Scanner input = new Scanner(System.in);
 		System.out.print("Enter title to search for: ");
 		String title = input.nextLine().toLowerCase();
-		//Compare to the rest of the bookList. Case insensitive. Save the index Number for later.
-		for(int i = 0; i < bookList.size(); i++) {
-			if(bookList.get(i).getTitle().toLowerCase().contains(title)) {
+		// Compare to the rest of the bookList. Case insensitive. Save the index Number
+		// for later.
+		for (int i = 0; i < bookList.size(); i++) {
+			if (bookList.get(i).getTitle().toLowerCase().contains(title)) {
 				System.out.println(bookList.get(i));
-			}			
+			}
 		}
 		input.close();
 	}
@@ -231,11 +233,24 @@ public class Driver {
 	}
 
 	/**
+	 * Method will grab x random books from user and display.
 	 * 
+	 * @author Liam
+	 * @version 1.0
+	 * 
+	 * Error with scanner. So numOfBook is hard coded for now.
 	 */
 	public void produceRandomBookList() {
-		// TODO Auto-generated method stub
+		//Scanner in = new Scanner(System.in);
+		System.out.println("============================================\nRandom"); //this is temp just to show the random method
+		System.out.println("Enter number of books: ");
+		int numOfBook = 6; //change this to int numofBook = in.nextInt();
 
+		for (int i = 0; i < numOfBook; i++) {
+			double rand = (Math.random()*bookList.size());
+			System.out.println(bookList.get((int)rand));
+		}
+	//	in.close();
 	}
 
 	/**
