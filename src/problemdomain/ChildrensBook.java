@@ -76,7 +76,7 @@ public class ChildrensBook extends Book {
 
 	@Override
 	public String toString() {
-		return super.toString()+"Authors:	      "+this.authors+"\nFormat:		"+this.format;
+		return super.toString()+String.format("%-15s\t%s%n", "Authors:",this.authors)+String.format("%-15s\t%s%n", "Format:",this.format);
 	}
 
 }
