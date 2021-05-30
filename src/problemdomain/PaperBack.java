@@ -83,8 +83,31 @@ public class PaperBack extends Book {
 	@Override
 	public String toString()
 	{
+		String genreType;
+		switch(this.genre) {
+		case 'A':
+			genreType = "Adventure";
+			break;
+		case 'D':
+			genreType = "Drama";
+			break;
+		case 'E':
+			genreType = "Education";
+			break;
+		case 'C':
+			genreType = "Classic";
+			break;
+		case 'F':
+			genreType = "Fantasy";
+			break;
+		case 'S':
+			genreType = "Science Fiction";
+			break;
+		default:
+			genreType = "Null";
+		}
 		return super.toString()+String.format("%-15s\t%s%n", "Authors:",this.authors)+String.format("%-15s\t%s%n", "Year:",this.year)
-	    +String.format("%-15s\t%s%n", "Genre:",this.genre);
+	    +String.format("%-15s\t%s%n", "Genre:",genreType);
 	}
 	
 	
