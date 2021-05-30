@@ -215,7 +215,7 @@ public class Driver {
 			 * */
 
 			int option;
-			int isbnSelection;
+			String isbnSelection;
 			String bookTitle;
 			int typeOfBook;
 			int numOfRandomBooks;
@@ -237,7 +237,7 @@ public class Driver {
 				switch (option) {
 				case 1:
 					System.out.printf("Enter the ISBN of book: ");
-					isbnSelection = in.nextInt();
+					isbnSelection = in.nextLine();
 					checkOutBook(isbnSelection); //use isbn entered to check out 
 					break;
 				case 2:
