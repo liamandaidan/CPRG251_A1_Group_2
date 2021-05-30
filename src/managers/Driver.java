@@ -231,8 +231,8 @@ public class Driver {
 				+ "5. Save & Exit%n%n");
 
 		System.out.printf("Enter option: ");
-		option = in.nextInt();
-
+		Scanner intInput = new Scanner(System.in);//We need to make a scanner to handle ints or we get an error
+		option = intInput.nextInt();
 		while (option != 5) {
 			switch (option) {
 			case 1:
@@ -267,6 +267,8 @@ public class Driver {
 			}
 		}
 		saveBook();
+		intInput.close();
+		in.close();
 	}
 
 	/**
