@@ -342,24 +342,18 @@ public class Driver {
 	}
 
 	/**
-	 * Method will grab x random books from user and display.
+	 * Method will grab x random books from user and display random books.
 	 * 
 	 * @author Liam
-	 * @version 1.0
+	 * @param numOfbooks this will take in the number of books from user.
+	 * @version 1.2
 	 * 
-	 * Error with scanner. So numOfBook is hard coded for now.
 	 */
-	public void produceRandomBookList() {
-		//Scanner in = new Scanner(System.in);
-		System.out.println("============================================\nRandom"); //this is temp just to show the random method
-		System.out.println("Enter number of books: ");
-		int numOfBook = 6; //change this to int numofBook = in.nextInt();
-
-		for (int i = 0; i < numOfBook; i++) {
+	public void produceRandomBookList(int numOfBooks) {
+		for (int i = 0; i < numOfBooks; i++) {
 			double rand = (Math.random()*bookList.size());
 			System.out.println(bookList.get((int)rand));
 		}
-	//	in.close();
 	}
 
 	/**
