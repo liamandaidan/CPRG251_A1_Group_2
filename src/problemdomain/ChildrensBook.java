@@ -76,7 +76,22 @@ public class ChildrensBook extends Book {
 
 	@Override
 	public String toString() {
-		return super.toString()+String.format("%-15s\t%s%n", "Authors:",this.authors)+String.format("%-15s\t%s%n", "Format:",this.format);
+		String formatType;
+		switch (this.format) {
+		case 'P':
+			formatType = "Picture Book";
+			break;
+		case 'E':
+			formatType = "Early Readers";
+			break;
+		case 'C':
+			formatType = "Chapter Book";
+			break;
+		default:
+			formatType = "Null";
+		}
+		return super.toString() + String.format("%-15s\t%s%n", "Authors:", this.authors)
+				+ String.format("%-15s\t%s%n", "Format:", formatType);
 	}
 
 }
