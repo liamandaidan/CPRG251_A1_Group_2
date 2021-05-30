@@ -120,7 +120,7 @@ public class Driver {
 		int available = Integer.parseInt(bookInfo[2]);
 		int total = Integer.parseInt(bookInfo[3]);
 		String title = bookInfo[4];
-		String publisher = bookInfo[4];
+		String publisher = bookInfo[5];
 		char diet = bookInfo[6].charAt(0);
 
 		bookList.add(new CookBook(isbn, callNumber, available, total, title, publisher, diet));
