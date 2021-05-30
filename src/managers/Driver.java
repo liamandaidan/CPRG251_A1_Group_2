@@ -316,21 +316,15 @@ public class Driver {
 	 * Will display books in table form.
 	 * 
 	 * @author Liam
-	 * @version 1.2
+	 * @param title name to search bookList with.
+	 * @version 1.4
 	 */
-	public void findBookTitle() {
-		// Print to user read In From user
-		Scanner input = new Scanner(System.in);
-		System.out.print("Enter title to search for: ");
-		String title = input.nextLine().toLowerCase();
-		// Compare to the rest of the bookList. Case insensitive. Save the index Number
-		// for later.
+	public void findBookTitle(String title) {
 		for (int i = 0; i < bookList.size(); i++) {
 			if (bookList.get(i).getTitle().toLowerCase().contains(title)) {
 				System.out.println(bookList.get(i));
 			}
 		}
-		input.close();
 	}
 
 	/**
