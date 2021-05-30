@@ -357,10 +357,15 @@ public class Driver {
 	 * @version 1.4
 	 */
 	public void findBookTitle(String title) {
+		boolean match = false;
 		for (int i = 0; i < bookList.size(); i++) {
 			if (bookList.get(i).getTitle().toLowerCase().contains(title)) {
+				match = true;
 				System.out.println(bookList.get(i));
 			}
+		}
+		if(!match) {
+			System.out.println("Could not find the book Title");
 		}
 	}
 
