@@ -354,12 +354,13 @@ public class Driver {
 	 * 
 	 * @author Liam
 	 * @param title name to search bookList with.
-	 * @version 1.4
+	 * @version 1.6
 	 */
 	public void findBookTitle(String title) {
+		//find error case of title not matching
 		boolean match = false;
 		for (int i = 0; i < bookList.size(); i++) {
-			if (bookList.get(i).getTitle().toLowerCase().contains(title)) {
+			if (bookList.get(i).getTitle().toLowerCase().contains(title)||bookList.get(i).getTitle().toLowerCase().equals(title)) {
 				match = true;
 				System.out.println(bookList.get(i));
 			}
