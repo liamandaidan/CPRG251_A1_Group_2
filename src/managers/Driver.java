@@ -225,15 +225,17 @@ public class Driver {
 		char freqSelected;
 
 		Scanner in = new Scanner(System.in);
-
+		Scanner intInput = new Scanner(System.in);//We need to make a scanner to handle ints or we get an error
+		
 		System.out.printf("Welcome to the ABC Book Company: How may we assist you?%n" + "1. Checkout Book%n"
 				+ "2. Find Books by Title%n" + "3. Display Books by Type%n" + "4. Produce Random Book List%n"
 				+ "5. Save & Exit%n%n");
 
 		System.out.printf("Enter option: ");
-		Scanner intInput = new Scanner(System.in);//We need to make a scanner to handle ints or we get an error
 		option = intInput.nextInt();
+
 		while (option != 5) {
+			
 			switch (option) {
 			case 1:
 				System.out.printf("Enter the ISBN of book: ");
@@ -265,9 +267,15 @@ public class Driver {
 				produceRandomBookList(numOfRandomBooks);
 				break;
 			}
+			System.out.printf("Welcome to the ABC Book Company: How may we assist you?%n" + "1. Checkout Book%n"
+					+ "2. Find Books by Title%n" + "3. Display Books by Type%n" + "4. Produce Random Book List%n"
+					+ "5. Save & Exit%n%n");
+
+			System.out.printf("Enter option: ");
+			
+			option = intInput.nextInt();
 		}
 		saveBook();
-		intInput.close();
 		in.close();
 	}
 
