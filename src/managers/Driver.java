@@ -1,7 +1,6 @@
 package managers;
 
 import problemdomain.*;
-import tests.Scanner;
 
 import java.io.*;
 import java.util.*;
@@ -25,12 +24,15 @@ public class Driver {
 	public Driver() {
 		bookList = new ArrayList<Book>();
 		loadBooks();
-		
-		//the following 4 lines are code testing the function of the checkOutBook method
-				//checkOutBook("9789560996916");//operating systems concepts has 5 available out of 8 to start
-				//checkOutBook("9796356055276");//the great gatsby has 0 available out of 8
-				//checkOutBook("9792662264098");//Time magazine is a periodical and cannot be checked out
-				//checkOutBook("2387984712697");//testing an isbn that doesn't exist
+
+		// the following 4 lines are code testing the function of the checkOutBook
+		// method
+		// checkOutBook("9789560996916");//operating systems concepts has 5 available
+		// out of 8 to start
+		// checkOutBook("9796356055276");//the great gatsby has 0 available out of 8
+		// checkOutBook("9792662264098");//Time magazine is a periodical and cannot be
+		// checked out
+		// checkOutBook("2387984712697");//testing an isbn that doesn't exist
 		displayMenu();
 
 		// The follow code is to test that all of the books were added
@@ -39,8 +41,7 @@ public class Driver {
 		 * for(Book b: bookList){ System.out.println(b.getTitle()); }
 		 * System.out.println(bookList.size());
 		 */
-		
-		
+
 	}
 
 	/**
@@ -190,125 +191,151 @@ public class Driver {
 
 	/**
 	 * this displays the menu for the user to choose from
+	 * 
 	 * @author Robyn
 	 */
 	public void displayMenu() {
-	/*
-	 * // Todo create menu
-	 * 
-	 * // From menu four functions to call checkOutBook(); findBookTitle();
-	 * displayBookType(); produceRandomBookList(); // Save book and exit saveBook();
-	 */
-		
+		/*
+		 * // Todo create menu
+		 * 
+		 * // From menu four functions to call checkOutBook(); findBookTitle();
+		 * displayBookType(); produceRandomBookList(); // Save book and exit saveBook();
+		 */
+
 		/**
-		 * @param option is selections made by user
-		 * @param isbnSelection is the isbn entered by user
-		 * @param bookTitle is the title of the book the user searches for
-		 * @param typeOfBook is the type of book the user enters
-		 * @param numOfRandomBooks is the number of books the user wants to randomly display
-		 * @param freqSelected is the frequency of the periodic book the user enters
+		 * @param option           is selections made by user
+		 * @param isbnSelection    is the isbn entered by user
+		 * @param bookTitle        is the title of the book the user searches for
+		 * @param typeOfBook       is the type of book the user enters
+		 * @param numOfRandomBooks is the number of books the user wants to randomly
+		 *                         display
+		 * @param freqSelected     is the frequency of the periodic book the user enters
 		 * 
 		 */
 
-			/*
-			 * NEED A METHOD FOR displayPeriodicBook
-			 * */
+		/*
+		 * NEED A METHOD FOR displayPeriodicBook
+		 */
 
-			int option;
-			String isbnSelection;
-			String bookTitle;
-			int typeOfBook;
-			int numOfRandomBooks;
-			char freqSelected;
-			
-			Scanner in = new Scanner (System.in);
-			
-			System.out.printf ("Welcome to the ABC Book Company: How may we assist you?%n" +
-					"1. Checkout Book%n" +
-					"2. Find Books by Title%n" +
-					"3. Display Books by Type%n" +
-					"4. Produce Random Book List%n" +
-					"5. Save & Exit%n%n" );
+		int option;
+		String isbnSelection;
+		String bookTitle;
+		int typeOfBook;
+		int numOfRandomBooks;
+		char freqSelected;
 
-			System.out.printf("Enter option: ");
-			option = in.nextInt();
+		Scanner in = new Scanner(System.in);
 
-			while (option != 5) {
-				switch (option) {
-				case 1:
-					System.out.printf("Enter the ISBN of book: ");
-					isbnSelection = in.nextLine();
-					checkOutBook(isbnSelection); //use isbn entered to check out 
-					break;
-				case 2:
-					System.out.printf("Enter the title to search for: ");
-					bookTitle = in.nextLine();
-					findBookTitle(bookTitle); 
-					break;
-				case 3:
-					System.out.printf("#  Type%n" +
-							"1. Children's Books%n" +
-							"2. CookBooks%n" +
-							"3. Paperbacks%n" +
-							"4. Periodicals%n%n");
-					System.out.printf("Enter type of book: ");
-					typeOfBook = in.nextInt();
-					if(typeOfBook == 4){
-						System.out.printf("%nEnter a frequency (D for Daily, W for Weekly, "
-								+ "M for Monthly, B for Biweekly, or Q for Quarterly): ");
-						freqSelected = in.next().charAt(0);
-	                    displayPeriodicBook(freqSelected); //displayFrequency method needed! 
-					}
-					displayBookType(typeOfBook);
-					break;
-				case 4: 
-					System.out.printf("Enter number of books: ");
-					numOfRandomBooks = in.nextInt();
-					produceRandomBookList(numOfRandomBooks);
-					break;
+		System.out.printf("Welcome to the ABC Book Company: How may we assist you?%n" + "1. Checkout Book%n"
+				+ "2. Find Books by Title%n" + "3. Display Books by Type%n" + "4. Produce Random Book List%n"
+				+ "5. Save & Exit%n%n");
+
+		System.out.printf("Enter option: ");
+		option = in.nextInt();
+
+		while (option != 5) {
+			switch (option) {
+			case 1:
+				System.out.printf("Enter the ISBN of book: ");
+				isbnSelection = in.nextLine();
+				checkOutBook(isbnSelection); // use isbn entered to check out
+				break;
+			case 2:
+				System.out.printf("Enter the title to search for: ");
+				bookTitle = in.nextLine();
+				findBookTitle(bookTitle);
+				break;
+			case 3:
+				System.out.printf("#  Type%n" + "1. Children's Books%n" + "2. CookBooks%n" + "3. Paperbacks%n"
+						+ "4. Periodicals%n%n");
+				System.out.printf("Enter type of book: ");
+				typeOfBook = in.nextInt();
+				if (typeOfBook == 4) {
+					System.out.printf("%nEnter a frequency (D for Daily, W for Weekly, "
+							+ "M for Monthly, B for Biweekly, or Q for Quarterly): ");
+					freqSelected = in.next().charAt(0);
+					showBookType(typeOfBook, freqSelected); // displayFrequency method needed!
+				} else {
+					showBookType(typeOfBook);
+				}
+				break;
+			case 4:
+				System.out.printf("Enter number of books: ");
+				numOfRandomBooks = in.nextInt();
+				produceRandomBookList(numOfRandomBooks);
+				break;
+			}
+		}
+		saveBook();
+	}
+
+	/**
+	 * The purpose of this method will be to process user input, search for book
+	 * types and display.
+	 * 
+	 * @author Liam
+	 * @param typeOfBook 1 for childernsBook, 2 for cookBook, 3 for paperback, 4 for
+	 *                   Periodic
+	 * @version 1.0
+	 */
+	private void showBookType(int typeOfBook) {
+		for (int i = 0; i < bookList.size(); i++) {
+			if (typeOfBook - 1 == bookType(bookList.get(i).getIsbn())) { // 0=ChildernsBook 1=cookBook 2=paperback
+																			// 3=Periodic
+				System.out.println(bookList.get(i));
+			}
+		}
+	}
+
+	/**
+	 * The purpose of this method will be to process user input, search for book
+	 * type 4 and display.
+	 * 
+	 * @author Liam
+	 * @param typeOfBook   Integer being 4 for Periodic
+	 * @param freqSelected Char D, W, M, B, Q
+	 * @version 1.0
+	 */
+	private void showBookType(int typeOfBook, char freqSelected) {
+		// we are going to print all periodic then print all freqSelected
+		final int PERIODIC = 3;
+		for (int i = 0; i < bookList.size(); i++) {
+			if (PERIODIC == bookType(bookList.get(i).getIsbn())) { // 3=Periodic
+				if (((Periodic) bookList.get(i)).getFrequency() == freqSelected) {// check to see if freq is same
+					System.out.println(bookList.get(i));
 				}
 			}
-			savebook();
 		}
-
+	}
 
 	/**
 	 * @author Benson
 	 */
 	public void checkOutBook(String isbn) {
 
-		if(bookExists(isbn))
-		{
-		 for(Book theBook: bookList)
-		 {
-		 	String bookCode = theBook.getIsbn();
-		 	if(bookCode.equals(isbn))
-		 		{
-		 			if(bookType(bookCode) != 3)
-		 			{
-		 /*test code*///System.out.println(theBook.toString());
-		 			if(theBook.getAvailable() >= 1)
-		 			{
-		 				theBook.setAvailable(theBook.getAvailable() - 1);
-		 				System.out.println("Book checked out successfully. Enjoy your reading!");
-		 /*test code*///System.out.println(theBook.toString());
-		 			} else
-		 			{
-		  				System.out.println("Sorry, there are no more copies of this book available to check out. Please try another book.");
-		  			}
-		 			} else
-		 			{
-		 				System.out.println("Sorry, you can't check out periodicals.");
-		 			}
-		 		}
-		 }
-		} else
-		{
-		 	System.out.println("That ISBN does not exist in our system. Please enter a valid ISBN.");
+		if (bookExists(isbn)) {
+			for (Book theBook : bookList) {
+				String bookCode = theBook.getIsbn();
+				if (bookCode.equals(isbn)) {
+					if (bookType(bookCode) != 3) {
+						/* test code */// System.out.println(theBook.toString());
+						if (theBook.getAvailable() >= 1) {
+							theBook.setAvailable(theBook.getAvailable() - 1);
+							System.out.println("Book checked out successfully. Enjoy your reading!");
+							/* test code */// System.out.println(theBook.toString());
+						} else {
+							System.out.println(
+									"Sorry, there are no more copies of this book available to check out. Please try another book.");
+						}
+					} else {
+						System.out.println("Sorry, you can't check out periodicals.");
+					}
+				}
+			}
+		} else {
+			System.out.println("That ISBN does not exist in our system. Please enter a valid ISBN.");
 		}
-		  
-		 
-		 
+
 	}
 
 	/**
@@ -328,14 +355,6 @@ public class Driver {
 	}
 
 	/**
-	 * This will be used in the rest of the function to display book in a nice form.
-	 */
-	public void displayBookType() {
-		// TODO Auto-generated method stub
-
-	}
-
-	/**
 	 * Method will grab x random books from user and display random books.
 	 * 
 	 * @author Liam
@@ -345,8 +364,8 @@ public class Driver {
 	 */
 	public void produceRandomBookList(int numOfBooks) {
 		for (int i = 0; i < numOfBooks; i++) {
-			double rand = (Math.random()*bookList.size());
-			System.out.println(bookList.get((int)rand));
+			double rand = (Math.random() * bookList.size());
+			System.out.println(bookList.get((int) rand));
 		}
 	}
 
@@ -357,24 +376,23 @@ public class Driver {
 		// TODO Auto-generated method stub
 
 	}
-	/**Method to check if a book exists or not
+
+	/**
+	 * Method to check if a book exists or not
 	 * 
 	 * @author Benson
 	 * 
 	 * @param String
 	 * @return boolean
-	 * */
-	public boolean bookExists(String isbn)
-	{
-		for(int i = 0; i < bookList.size(); i++)
-		{
-			if(bookList.get(i).getIsbn().equals(isbn))
-			{
-				/*test line*///System.out.println("true");
+	 */
+	public boolean bookExists(String isbn) {
+		for (int i = 0; i < bookList.size(); i++) {
+			if (bookList.get(i).getIsbn().equals(isbn)) {
+				/* test line */// System.out.println("true");
 				return true;
 			}
 		}
-		/*test line*///System.out.println("false");
+		/* test line */// System.out.println("false");
 		return false;
 	}
 
