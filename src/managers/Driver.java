@@ -363,7 +363,7 @@ public class Driver {
 		for (int i = 0; i < bookList.size(); i++) {
 			//The line below contains the issue to fix
 			//Find text with Contains OR find text with the full title
-			if (bookList.get(i).getTitle().toLowerCase().contains(title)||bookList.get(i).getTitle().toLowerCase().equals(title)) { 
+			if (bookList.get(i).getTitle().toLowerCase().contains(title)||bookList.get(i).getTitle().toLowerCase().equals(title.toLowerCase())) { 
 				match = true;
 				System.out.println(bookList.get(i));
 			}
