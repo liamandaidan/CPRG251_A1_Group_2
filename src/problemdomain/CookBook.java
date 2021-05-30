@@ -65,8 +65,11 @@ public class CookBook extends Book {
 	public String toString() {
 		String dietName;
 		switch(this.diet) {
-		case 'D': dietName = "Diabetic";
-		
+		case 'D': dietName = "Diabetic"; break;
+		case 'V': dietName = "Vegetarian"; break;
+		case 'G': dietName = "Gluten-free"; break;
+		case 'I': dietName = "International"; break;
+		case 'N': dietName = "None"; break;
 		default: dietName = "Null";
 		}
 		
