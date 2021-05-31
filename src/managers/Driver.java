@@ -195,13 +195,6 @@ public class Driver {
 	 * @author Robyn
 	 */
 	public void displayMenu() {
-		/*
-		 * // Todo create menu
-		 * 
-		 * // From menu four functions to call checkOutBook(); findBookTitle();
-		 * displayBookType(); produceRandomBookList(); // Save book and exit saveBook();
-		 */
-
 		/**
 		 * @param option           is selections made by user
 		 * @param isbnSelection    is the isbn entered by user
@@ -213,13 +206,10 @@ public class Driver {
 		 * 
 		 */
 
-		/*
-		 * NEED A METHOD FOR displayPeriodicBook
-		 */
-
 		String option;
 		String isbnSelection;
 		String bookTitle;
+		String displayBookOfType;
 		int typeOfBook;
 		int numOfRandomBooks;
 		char freqSelected;
@@ -234,12 +224,11 @@ public class Driver {
 		option = in.nextLine();
 
 		while (!option.equals("5")) {
-			// in.nextLine();
 			switch (option) {
 			case "1":
 				System.out.printf("Enter the ISBN of book: ");
 				isbnSelection = in.nextLine();
-				checkOutBook(isbnSelection); // use isbn entered to check out
+				checkOutBook(isbnSelection);
 				break;
 			case "2":
 				System.out.printf("Enter the title to search for: ");
@@ -250,16 +239,23 @@ public class Driver {
 				System.out.printf("#  Type%n" + "1. Children's Books%n" + "2. CookBooks%n" + "3. Paperbacks%n"
 						+ "4. Periodicals%n%n");
 				System.out.printf("Enter type of book: ");
-				typeOfBook = in.nextInt();
-				if (typeOfBook == 4) {
-					System.out.printf("%nEnter a frequency (D for Daily, W for Weekly, "
-							+ "M for Monthly, B for Biweekly, or Q for Quarterly): ");
-					freqSelected = in.next().charAt(0);
-					showBookType(typeOfBook, freqSelected); // displayFrequency method needed!
+
+				displayBookOfType = in.nextLine();
+				if ("1234".contains(displayBookOfType)) {
+					typeOfBook = Integer.parseInt(displayBookOfType);
+					if (typeOfBook == 4) {
+						System.out.printf("%nEnter a frequency (D for Daily, W for Weekly, "
+								+ "M for Monthly, B for Biweekly, or Q for Quarterly): ");
+						freqSelected = in.nextLine().charAt(0);
+						showBookType(typeOfBook, freqSelected); // displayFrequency method needed!
+					} else {
+						showBookType(typeOfBook);
+					}
+					break;
 				} else {
-					showBookType(typeOfBook);
+					System.out.println("Enter a valid book type (1-4):\n");
+					continue;
 				}
-				break;
 			case "4":
 				System.out.printf("Enter number of books: ");
 				numOfRandomBooks = Integer.parseInt(in.nextLine());
