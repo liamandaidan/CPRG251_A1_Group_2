@@ -245,7 +245,7 @@ public class Driver {
 			case 2:
 				System.out.printf("Enter the title to search for: ");
 				bookTitle = in.nextLine();
-				findBookTitle(bookTitle.toLowerCase());
+				findBookTitle(bookTitle);
 				break;
 			case 3:
 				System.out.printf("#  Type%n" + "1. Children's Books%n" + "2. CookBooks%n" + "3. Paperbacks%n"
