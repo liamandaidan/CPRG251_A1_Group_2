@@ -244,7 +244,6 @@ public class Driver {
 			case 2:
 				System.out.printf("Enter the title to search for: ");
 				bookTitle = in.nextLine();
-				// Insert toLowerCase here for bookTitle !!!!!!! that will fix the method
 				findBookTitle(bookTitle);
 				break;
 			case 3:
