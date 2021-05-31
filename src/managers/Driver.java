@@ -25,13 +25,10 @@ public class Driver {
 		bookList = new ArrayList<Book>();
 		loadBooks();
 
-		// the following 4 lines are code testing the function of the checkOutBook
-		// method
-		// checkOutBook("9789560996916");//operating systems concepts has 5 available
-		// out of 8 to start
+		// the following 4 lines are code testing the function of the checkOutBook method
+		// checkOutBook("9789560996916");//operating systems concepts has 5 available out of 8 to start
 		// checkOutBook("9796356055276");//the great gatsby has 0 available out of 8
-		// checkOutBook("9792662264098");//Time magazine is a periodical and cannot be
-		// checked out
+		// checkOutBook("9792662264098");//Time magazine is a periodical and cannot be checked out
 		// checkOutBook("2387984712697");//testing an isbn that doesn't exist
 		displayMenu();
 
@@ -319,6 +316,7 @@ public class Driver {
 	}
 
 	/**
+	 * This method takes a string ISBN, checks if the book exists, then either checks it out or displays an error message depending on availability
 	 * @author Benson
 	 */
 	public void checkOutBook(String isbn) {
