@@ -409,6 +409,8 @@ public class Driver {
 			case 3: //periodic
 				formated = String.format("%s;%s;%s;%s;", null);
 				break;
+			default: 
+				formated = "Null";
 			}
 		}
 
