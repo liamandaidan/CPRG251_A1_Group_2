@@ -225,17 +225,16 @@ public class Driver {
 		char freqSelected;
 
 		Scanner in = new Scanner(System.in);
-		Scanner intInput = new Scanner(System.in);//We need to make a scanner to handle ints or we get an error
-		
+
 		System.out.printf("Welcome to the ABC Book Company: How may we assist you?%n" + "1. Checkout Book%n"
 				+ "2. Find Books by Title%n" + "3. Display Books by Type%n" + "4. Produce Random Book List%n"
 				+ "5. Save & Exit%n%n");
 
 		System.out.printf("Enter option: ");
-		option = intInput.nextInt();
+		option = in.nextInt();
 
 		while (option != 5) {
-			
+			in.nextLine();
 			switch (option) {
 			case 1:
 				System.out.printf("Enter the ISBN of book: ");
@@ -272,8 +271,8 @@ public class Driver {
 					+ "5. Save & Exit%n%n");
 
 			System.out.printf("Enter option: ");
-			
-			option = intInput.nextInt();
+
+			option = in.nextInt();
 		}
 		saveBook();
 		in.close();
@@ -357,17 +356,18 @@ public class Driver {
 	 * @version 1.6
 	 */
 	public void findBookTitle(String title) {
-		//find error case of title not matching
+		// find error case of title not matching
 		boolean match = false;
 		for (int i = 0; i < bookList.size(); i++) {
-			//The line below contains the issue to fix
-			//Find text with Contains OR find text with the full title
-			if (bookList.get(i).getTitle().toLowerCase().contains(title.toLowerCase())||bookList.get(i).getTitle().toLowerCase().equals(title.toLowerCase())) { 
+			// The line below contains the issue to fix
+			// Find text with Contains OR find text with the full title
+			if (bookList.get(i).getTitle().toLowerCase().contains(title.toLowerCase())
+					|| bookList.get(i).getTitle().toLowerCase().equals(title.toLowerCase())) {
 				match = true;
 				System.out.println(bookList.get(i));
 			}
 		}
-		if(!match) {
+		if (!match) {
 			System.out.println("Could not find the book Title");
 		}
 	}
@@ -388,11 +388,42 @@ public class Driver {
 	}
 
 	/**
-	 * @author 
+	 * @author
 	 */
 	public void saveBook() {
-		//if someone wants to work on this function would be super great!
+		// get type of Book
+		String formated;
+		String title;
+		
+		for (int i = 0; i < bookList.size(); i++) {
+			int type = bookType(bookList.get(i).getIsbn());
+			switch (type) {
+			case 0:	//ChildernsBook
+				formated = String.format("%s;%s;%d;%d;%s;%s;%c", bookList.get(i).getIsbn(),bookList.get(i).getCallNumber(),bookList.get(i).getAvailable(),
+						bookList.get(i).getTotal(),bookList.get(i).getTitle(),((ChildrensBook) bookList.get(i)).getAuthors(),((ChildrensBook) bookList.get(i)).getFormat());
+				break;
+			case 1: //CookBook @benson
+				formated = String.format("%s;%s;%s;%s;", null);
+				break;
+			case 2: //PaperBack
+				formated = String.format("%s;%s;%s;%s;%s;%s;%s;%s",bookList.get(i).getIsbn(), 
+						bookList.get(i).getCallNumber(), bookList.get(i).getAvailable(), bookList.get(i).getTotal(), 
+						bookList.get(i).getTitle(), ((ChildrensBook) bookList.get(i)).getAuthors(), ((PaperBack) bookList.get(i)).getYear(),
+						((PaperBack) bookList.get(i)).getGenre());
+				break;
+			case 3: //periodic
+				formated = String.format("%s;%s;%s;%s;%s;%s;", bookList.get(i).getIsbn(), bookList.get(i).getCallNumber(),bookList.get(i).getAvailable()
+						,bookList.get(i).getTotal(), bookList.get(i).getTitle(), ((Periodic) bookList.get(i)).getFrequency());
+				break;
+			default: 
+				formated = "Null";
+			}
+		}
 
+		// String for each book - 9791149311508;050;0;5;Men's Health;M
+
+		// wipe file
+		// printWrite to that books.txt
 	}
 
 	/**
