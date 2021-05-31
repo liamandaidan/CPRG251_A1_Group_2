@@ -195,13 +195,6 @@ public class Driver {
 	 * @author Robyn
 	 */
 	public void displayMenu() {
-		/*
-		 * // Todo create menu
-		 * 
-		 * // From menu four functions to call checkOutBook(); findBookTitle();
-		 * displayBookType(); produceRandomBookList(); // Save book and exit saveBook();
-		 */
-
 		/**
 		 * @param option           is selections made by user
 		 * @param isbnSelection    is the isbn entered by user
@@ -211,10 +204,6 @@ public class Driver {
 		 *                         display
 		 * @param freqSelected     is the frequency of the periodic book the user enters
 		 * 
-		 */
-
-		/*
-		 * NEED A METHOD FOR displayPeriodicBook
 		 */
 
 		String option;
@@ -235,12 +224,11 @@ public class Driver {
 		option = in.nextLine();
 
 		while (!option.equals("5")) {
-			// in.nextLine();
 			switch (option) {
 			case "1":
 				System.out.printf("Enter the ISBN of book: ");
 				isbnSelection = in.nextLine();
-				checkOutBook(isbnSelection); // use isbn entered to check out
+				checkOutBook(isbnSelection);
 				break;
 			case "2":
 				System.out.printf("Enter the title to search for: ");
