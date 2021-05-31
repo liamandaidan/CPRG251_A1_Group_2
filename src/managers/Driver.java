@@ -267,7 +267,7 @@ public class Driver {
 				break;
 
 			default:
-				System.out.println("Please enter an appropriate choice (1-4):");
+				System.out.println("Please enter an appropriate choice (1-4):\n");
 				break;
 			}
 			System.out.printf("Welcome to the ABC Book Company: How may we assist you?%n" + "1. Checkout Book%n"
