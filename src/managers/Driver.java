@@ -409,7 +409,7 @@ public class Driver {
 			case 2: //PaperBack
 				formated = String.format("%s;%s;%s;%s;%s;%s;%s;%s",bookList.get(i).getIsbn(), 
 						bookList.get(i).getCallNumber(), bookList.get(i).getAvailable(), bookList.get(i).getTotal(), 
-						bookList.get(i).getTitle(), ((ChildrensBook) bookList.get(i)).getAuthors(), ((PaperBack) bookList.get(i)).getYear(),
+						bookList.get(i).getTitle(), ((PaperBack) bookList.get(i)).getAuthors(), ((PaperBack) bookList.get(i)).getYear(),
 						((PaperBack) bookList.get(i)).getGenre());
 				break;
 			case 3: //periodic
@@ -419,8 +419,9 @@ public class Driver {
 			default: 
 				formated = "Null";
 			}
+			System.out.println(formated);
 		}
-
+		
 		// String for each book - 9791149311508;050;0;5;Men's Health;M
 
 		// wipe file
