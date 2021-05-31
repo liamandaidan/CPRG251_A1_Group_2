@@ -394,6 +394,8 @@ public class Driver {
 	public void saveBook() {
 		// get type of Book
 		String formated;
+		String title;
+		
 		for (int i = 0; i < bookList.size(); i++) {
 			int type = bookType(bookList.get(i).getIsbn());
 			switch (type) {
@@ -405,10 +407,14 @@ public class Driver {
 				formated = String.format("%s;%s;%s;%s;", null);
 				break;
 			case 2: //PaperBack
-				formated = String.format("%s;%s;%s;%s;", null);
+				formated = String.format("%s;%s;%s;%s;%s;%s;%s;%s",bookList.get(i).getIsbn(), 
+						bookList.get(i).getCallNumber(), bookList.get(i).getAvailable(), bookList.get(i).getTotal(), 
+						bookList.get(i).getTitle(), ((ChildrensBook) bookList.get(i)).getAuthors(), ((PaperBack) bookList.get(i)).getYear(),
+						((PaperBack) bookList.get(i)).getGenre());
 				break;
 			case 3: //periodic
-				formated = String.format("%s;%s;%s;%s;", null);
+				formated = String.format("%s;%s;%s;%s;%s;%s;", bookList.get(i).getIsbn(), bookList.get(i).getCallNumber(),bookList.get(i).getAvailable()
+						,bookList.get(i).getTotal(), bookList.get(i).getTitle(), ((Periodic) bookList.get(i)).getFrequency());
 				break;
 			default: 
 				formated = "Null";
