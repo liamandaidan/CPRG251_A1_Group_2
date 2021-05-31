@@ -217,7 +217,7 @@ public class Driver {
 		 * NEED A METHOD FOR displayPeriodicBook
 		 */
 
-		int option;
+		String option;
 		String isbnSelection;
 		String bookTitle;
 		int typeOfBook;
@@ -231,22 +231,22 @@ public class Driver {
 				+ "5. Save & Exit%n%n");
 
 		System.out.printf("Enter option: ");
-		option = in.nextInt();
+		option = in.nextLine();
 
-		while (option != 5) {
-			in.nextLine();
+		while (!option.equals("5")) {
+			// in.nextLine();
 			switch (option) {
-			case 1:
+			case "1":
 				System.out.printf("Enter the ISBN of book: ");
 				isbnSelection = in.nextLine();
 				checkOutBook(isbnSelection); // use isbn entered to check out
 				break;
-			case 2:
+			case "2":
 				System.out.printf("Enter the title to search for: ");
 				bookTitle = in.nextLine();
 				findBookTitle(bookTitle);
 				break;
-			case 3:
+			case "3":
 				System.out.printf("#  Type%n" + "1. Children's Books%n" + "2. CookBooks%n" + "3. Paperbacks%n"
 						+ "4. Periodicals%n%n");
 				System.out.printf("Enter type of book: ");
@@ -260,10 +260,14 @@ public class Driver {
 					showBookType(typeOfBook);
 				}
 				break;
-			case 4:
+			case "4":
 				System.out.printf("Enter number of books: ");
 				numOfRandomBooks = in.nextInt();
 				produceRandomBookList(numOfRandomBooks);
+				break;
+
+			default:
+				System.out.println("Please enter an appropriate choice (1-4):");
 				break;
 			}
 			System.out.printf("Welcome to the ABC Book Company: How may we assist you?%n" + "1. Checkout Book%n"
@@ -272,7 +276,7 @@ public class Driver {
 
 			System.out.printf("Enter option: ");
 
-			option = in.nextInt();
+			option = in.nextLine();
 		}
 		saveBook();
 		in.close();
@@ -392,36 +396,39 @@ public class Driver {
 	 */
 	public void saveBook() {
 		// get type of Book
-		//hello
+		// hello
 		String formated;
 		String title;
-		
+
 		for (int i = 0; i < bookList.size(); i++) {
 			int type = bookType(bookList.get(i).getIsbn());
 			switch (type) {
-			case 0:	//ChildernsBook
-				formated = String.format("%s;%s;%d;%d;%s;%s;%c", bookList.get(i).getIsbn(),bookList.get(i).getCallNumber(),bookList.get(i).getAvailable(),
-						bookList.get(i).getTotal(),bookList.get(i).getTitle(),((ChildrensBook) bookList.get(i)).getAuthors(),((ChildrensBook) bookList.get(i)).getFormat());
+			case 0: // ChildernsBook
+				formated = String.format("%s;%s;%d;%d;%s;%s;%c", bookList.get(i).getIsbn(),
+						bookList.get(i).getCallNumber(), bookList.get(i).getAvailable(), bookList.get(i).getTotal(),
+						bookList.get(i).getTitle(), ((ChildrensBook) bookList.get(i)).getAuthors(),
+						((ChildrensBook) bookList.get(i)).getFormat());
 				break;
-			case 1: //CookBook @benson
+			case 1: // CookBook @benson
 				formated = String.format("%s;%s;%s;%s;", null);
 				break;
-			case 2: //PaperBack
-				formated = String.format("%s;%s;%s;%s;%s;%s;%s;%s",bookList.get(i).getIsbn(), 
-						bookList.get(i).getCallNumber(), bookList.get(i).getAvailable(), bookList.get(i).getTotal(), 
-						bookList.get(i).getTitle(), ((PaperBack) bookList.get(i)).getAuthors(), ((PaperBack) bookList.get(i)).getYear(),
-						((PaperBack) bookList.get(i)).getGenre());
+			case 2: // PaperBack
+				formated = String.format("%s;%s;%s;%s;%s;%s;%s;%s", bookList.get(i).getIsbn(),
+						bookList.get(i).getCallNumber(), bookList.get(i).getAvailable(), bookList.get(i).getTotal(),
+						bookList.get(i).getTitle(), ((PaperBack) bookList.get(i)).getAuthors(),
+						((PaperBack) bookList.get(i)).getYear(), ((PaperBack) bookList.get(i)).getGenre());
 				break;
-			case 3: //periodic
-				formated = String.format("%s;%s;%s;%s;%s;%s;", bookList.get(i).getIsbn(), bookList.get(i).getCallNumber(),bookList.get(i).getAvailable()
-						,bookList.get(i).getTotal(), bookList.get(i).getTitle(), ((Periodic) bookList.get(i)).getFrequency());
+			case 3: // periodic
+				formated = String.format("%s;%s;%s;%s;%s;%s;", bookList.get(i).getIsbn(),
+						bookList.get(i).getCallNumber(), bookList.get(i).getAvailable(), bookList.get(i).getTotal(),
+						bookList.get(i).getTitle(), ((Periodic) bookList.get(i)).getFrequency());
 				break;
-			default: 
+			default:
 				formated = "Null";
 			}
 			System.out.println(formated);
 		}
-		
+
 		// String for each book - 9791149311508;050;0;5;Men's Health;M
 
 		// wipe file
