@@ -267,6 +267,7 @@ public class Driver {
 					produceRandomBookList(numOfRandomBooks);
 				} else {
 					System.out.println("Wrong user Input. Please use an appropriate number from 1-50.");
+					continue;
 				}
 				break;
 
