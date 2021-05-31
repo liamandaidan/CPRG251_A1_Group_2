@@ -398,7 +398,8 @@ public class Driver {
 			int type = bookType(bookList.get(i).getIsbn());
 			switch (type) {
 			case 0:	//ChildernsBook
-				formated = String.format("%s;%s;%s;%s;", null);
+				formated = String.format("%s;%s;%d;%d;%s;%s;%c", bookList.get(i).getIsbn(),bookList.get(i).getCallNumber(),bookList.get(i).getAvailable(),
+						bookList.get(i).getTotal(),bookList.get(i).getTitle(),((ChildrensBook) bookList.get(i)).getAuthors(),((ChildrensBook) bookList.get(i)).getFormat());
 				break;
 			case 1: //CookBook
 				formated = String.format("%s;%s;%s;%s;", null);
