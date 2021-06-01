@@ -258,10 +258,16 @@ public class Driver {
 				}
 			case "4":
 				System.out.printf("Enter number of books: ");
-				numOfRandomBooks = Integer.parseInt(in.nextLine());
-				if (numOfRandomBooks <= 50 && numOfRandomBooks >= 0) {
-					produceRandomBookList(numOfRandomBooks);
-				} else {
+				try {
+					numOfRandomBooks = Integer.parseInt(in.nextLine());
+					if (numOfRandomBooks <= 50 && numOfRandomBooks >= 0) {
+						produceRandomBookList(numOfRandomBooks);
+					} else {
+						System.out.println("Wrong user Input. Please use an appropriate number from 1-50.");
+						continue;
+
+					}
+				} catch (Exception e) {
 					System.out.println("Wrong user Input. Please use an appropriate number from 1-50.");
 					continue;
 				}
