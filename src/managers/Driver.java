@@ -192,13 +192,6 @@ public class Driver {
 	 * @author Robyn
 	 */
 	public void displayMenu() {
-		/*
-		 * // Todo create menu
-		 * 
-		 * // From menu four functions to call checkOutBook(); findBookTitle();
-		 * displayBookType(); produceRandomBookList(); // Save book and exit saveBook();
-		 */
-
 		/**
 		 * @param option           is selections made by user
 		 * @param isbnSelection    is the isbn entered by user
@@ -210,58 +203,69 @@ public class Driver {
 		 * 
 		 */
 
-		/*
-		 * NEED A METHOD FOR displayPeriodicBook
-		 */
-
-		int option;
+		String option;
 		String isbnSelection;
 		String bookTitle;
+		String displayBookOfType;
 		int typeOfBook;
 		int numOfRandomBooks;
 		char freqSelected;
 
 		Scanner in = new Scanner(System.in);
-		Scanner intInput = new Scanner(System.in);//We need to make a scanner to handle ints or we get an error
-		
+
 		System.out.printf("Welcome to the ABC Book Company: How may we assist you?%n" + "1. Checkout Book%n"
 				+ "2. Find Books by Title%n" + "3. Display Books by Type%n" + "4. Produce Random Book List%n"
 				+ "5. Save & Exit%n%n");
 
 		System.out.printf("Enter option: ");
-		option = intInput.nextInt();
+		option = in.nextLine();
 
-		while (option != 5) {
-			
+		while (!option.equals("5")) {
 			switch (option) {
-			case 1:
+			case "1":
 				System.out.printf("Enter the ISBN of book: ");
 				isbnSelection = in.nextLine();
-				checkOutBook(isbnSelection); // use isbn entered to check out
+				checkOutBook(isbnSelection);
 				break;
-			case 2:
+			case "2":
 				System.out.printf("Enter the title to search for: ");
 				bookTitle = in.nextLine();
 				findBookTitle(bookTitle);
 				break;
-			case 3:
+			case "3":
 				System.out.printf("#  Type%n" + "1. Children's Books%n" + "2. CookBooks%n" + "3. Paperbacks%n"
 						+ "4. Periodicals%n%n");
 				System.out.printf("Enter type of book: ");
-				typeOfBook = in.nextInt();
-				if (typeOfBook == 4) {
-					System.out.printf("%nEnter a frequency (D for Daily, W for Weekly, "
-							+ "M for Monthly, B for Biweekly, or Q for Quarterly): ");
-					freqSelected = in.next().charAt(0);
-					showBookType(typeOfBook, freqSelected); // displayFrequency method needed!
+
+				displayBookOfType = in.nextLine();
+				if ("1234".contains(displayBookOfType)) {
+					typeOfBook = Integer.parseInt(displayBookOfType);
+					if (typeOfBook == 4) {
+						System.out.printf("%nEnter a frequency (D for Daily, W for Weekly, "
+								+ "M for Monthly, B for Biweekly, or Q for Quarterly): ");
+						freqSelected = in.nextLine().charAt(0);
+						showBookType(typeOfBook, freqSelected); // displayFrequency method needed!
+					} else {
+						showBookType(typeOfBook);
+					}
+					break;
 				} else {
-					showBookType(typeOfBook);
+					System.out.println("Enter a valid book type (1-4):\n");
+					continue;
+				}
+			case "4":
+				System.out.printf("Enter number of books: ");
+				numOfRandomBooks = Integer.parseInt(in.nextLine());
+				if (numOfRandomBooks <= 50 && numOfRandomBooks >= 0) {
+					produceRandomBookList(numOfRandomBooks);
+				} else {
+					System.out.println("Wrong user Input. Please use an appropriate number from 1-50.");
+					continue;
 				}
 				break;
-			case 4:
-				System.out.printf("Enter number of books: ");
-				numOfRandomBooks = in.nextInt();
-				produceRandomBookList(numOfRandomBooks);
+
+			default:
+				System.out.println("Please enter an appropriate choice (1-4):\n");
 				break;
 			}
 			System.out.printf("Welcome to the ABC Book Company: How may we assist you?%n" + "1. Checkout Book%n"
@@ -269,8 +273,8 @@ public class Driver {
 					+ "5. Save & Exit%n%n");
 
 			System.out.printf("Enter option: ");
-			
-			option = intInput.nextInt();
+
+			option = in.nextLine();
 		}
 		saveBook();
 		in.close();
@@ -355,17 +359,18 @@ public class Driver {
 	 * @version 1.6
 	 */
 	public void findBookTitle(String title) {
-		//find error case of title not matching
+		// find error case of title not matching
 		boolean match = false;
 		for (int i = 0; i < bookList.size(); i++) {
-			//The line below contains the issue to fix
-			//Find text with Contains OR find text with the full title
-			if (bookList.get(i).getTitle().toLowerCase().contains(title.toLowerCase())||bookList.get(i).getTitle().toLowerCase().equals(title.toLowerCase())) { 
+			// The line below contains the issue to fix
+			// Find text with Contains OR find text with the full title
+			if (bookList.get(i).getTitle().toLowerCase().contains(title.toLowerCase())
+					|| bookList.get(i).getTitle().toLowerCase().equals(title.toLowerCase())) {
 				match = true;
 				System.out.println(bookList.get(i));
 			}
 		}
-		if(!match) {
+		if (!match) {
 			System.out.println("Could not find the book Title");
 		}
 	}
@@ -386,11 +391,47 @@ public class Driver {
 	}
 
 	/**
-	 * @author 
+	 * @author
 	 */
 	public void saveBook() {
-		//if someone wants to work on this function would be super great!
+		// get type of Book
+		// hello
+		String formated;
+		String title;
 
+		for (int i = 0; i < bookList.size(); i++) {
+			int type = bookType(bookList.get(i).getIsbn());
+			switch (type) {
+			case 0: // ChildernsBook
+				formated = String.format("%s;%s;%d;%d;%s;%s;%c", bookList.get(i).getIsbn(),
+						bookList.get(i).getCallNumber(), bookList.get(i).getAvailable(), bookList.get(i).getTotal(),
+						bookList.get(i).getTitle(), ((ChildrensBook) bookList.get(i)).getAuthors(),
+						((ChildrensBook) bookList.get(i)).getFormat());
+				break;
+			case 1: // CookBook @benson
+				formated = String.format("%s;%s;%s;%s;", null);
+				break;
+			case 2: // PaperBack
+				formated = String.format("%s;%s;%s;%s;%s;%s;%s;%s", bookList.get(i).getIsbn(),
+						bookList.get(i).getCallNumber(), bookList.get(i).getAvailable(), bookList.get(i).getTotal(),
+						bookList.get(i).getTitle(), ((PaperBack) bookList.get(i)).getAuthors(),
+						((PaperBack) bookList.get(i)).getYear(), ((PaperBack) bookList.get(i)).getGenre());
+				break;
+			case 3: // periodic
+				formated = String.format("%s;%s;%s;%s;%s;%s;", bookList.get(i).getIsbn(),
+						bookList.get(i).getCallNumber(), bookList.get(i).getAvailable(), bookList.get(i).getTotal(),
+						bookList.get(i).getTitle(), ((Periodic) bookList.get(i)).getFrequency());
+				break;
+			default:
+				formated = "Null";
+			}
+			System.out.println(formated);
+		}
+
+		// String for each book - 9791149311508;050;0;5;Men's Health;M
+
+		// wipe file
+		// printWrite to that books.txt
 	}
 
 	/**
