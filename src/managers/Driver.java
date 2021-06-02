@@ -82,7 +82,7 @@ public class Driver {
 	 * 
 	 * @param bookInfo Information about the book
 	 */
-	private void createChildrensBook(String[] bookInfo) {
+	public void createChildrensBook(String[] bookInfo) {
 		String isbn = bookInfo[0];
 		String callNumber = bookInfo[1];
 		int available = Integer.parseInt(bookInfo[2]);
@@ -100,7 +100,7 @@ public class Driver {
 	 * 
 	 * @param bookInfo Information about the book
 	 */
-	private void createCookBook(String[] bookInfo) {
+	public void createCookBook(String[] bookInfo) {
 		String isbn = bookInfo[0];
 		String callNumber = bookInfo[1];
 		int available = Integer.parseInt(bookInfo[2]);
@@ -118,7 +118,7 @@ public class Driver {
 	 * 
 	 * @param bookInfo Information about the book
 	 */
-	private void createPaperbackBook(String[] bookInfo) {
+	public void createPaperbackBook(String[] bookInfo) {
 		String isbn = bookInfo[0];
 		String callNumber = bookInfo[1];
 		int available = Integer.parseInt(bookInfo[2]);
@@ -137,7 +137,7 @@ public class Driver {
 	 * 
 	 * @param bookInfo Information about the book
 	 */
-	private void createPeriodical(String[] bookInfo) {
+	public void createPeriodical(String[] bookInfo) {
 		String isbn = bookInfo[0];
 		String callNumber = bookInfo[1];
 		int available = Integer.parseInt(bookInfo[2]);
@@ -154,7 +154,7 @@ public class Driver {
 	 * @param isbn Unique number about a book
 	 * @return book A number relating to book type
 	 */
-	private int bookType(String isbn) {
+	public int bookType(String isbn) {
 		int book = -1;
 		int lastDigit = Integer.parseInt((isbn.substring(isbn.length() - 1)));
 
@@ -274,7 +274,7 @@ public class Driver {
 	 * @param typeOfBook 1 for childernsBook, 2 for cookBook, 3 for paperback, 4 for
 	 *                   Periodic
 	 */
-	private void showBookType(int typeOfBook) {
+	public void showBookType(int typeOfBook) {
 		for (int i = 0; i < bookList.size(); i++) {
 			if (typeOfBook - 1 == bookType(bookList.get(i).getIsbn())) { // 0=ChildernsBook 1=cookBook 2=paperback
 																			// 3=Periodic
@@ -291,7 +291,7 @@ public class Driver {
 	 * @param typeOfBook   Integer being 4 for Periodic
 	 * @param freqSelected Char D, W, M, B, Q
 	 */
-	private void showBookType(int typeOfBook, char freqSelected) {
+	public void showBookType(int typeOfBook, char freqSelected) {
 		final int PERIODIC = 3;
 		for (int i = 0; i < bookList.size(); i++) {
 			if (PERIODIC == bookType(bookList.get(i).getIsbn())) { // 3=Periodic
