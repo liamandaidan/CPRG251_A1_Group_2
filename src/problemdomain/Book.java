@@ -4,7 +4,7 @@ package problemdomain;
  * Used to create a book object.
  * 
  * @author liamm
- * @version 1.5
+ * @version June/2/2021
  */
 
 public class Book {
@@ -16,14 +16,14 @@ public class Book {
 	private String title;
 
 	/**
-	 * Create Book with no arguments.
+	 * Construct Book with no arguments.
 	 */
 	public Book() {
 		super();
 	}
 
 	/**
-	 * Create a Book object with arguments.
+	 * Construct a Book object with arguments.
 	 * 
 	 * @param isbn       The ISBN of the Book
 	 * @param callNumber The Call number of the Book
@@ -131,10 +131,10 @@ public class Book {
 
 	/**
 	 * Returns a formatted output of the book info
-	 * 
-	 * @return Formated out put
+	 * @Override
+	 * @return Formated output
 	 */
-	@Override
+
 	public String toString() {
 
 		return String.format("%-15s\t%s", "ISBN:", isbn) + String.format("%-15s\t%s", "\nCall Number:", callNumber)
