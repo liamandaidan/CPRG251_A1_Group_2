@@ -24,7 +24,7 @@ public class Book {
 
 	/**
 	 * Create a Book object with arguments.
-	 * todo more detail
+	 * 
 	 * @param isbn       The ISBN of the Book
 	 * @param callNumber The Call number of the Book
 	 * @param available  How many books are avaliable
@@ -38,9 +38,10 @@ public class Book {
 		this.total = total;
 		this.title = title;
 	}
-	
-	
-	/** 
+
+	/**
+	 * Gets the ISBN of the book.
+	 * 
 	 * @return Returns ISBN
 	 */
 	public String getIsbn() {
@@ -48,6 +49,8 @@ public class Book {
 	}
 
 	/**
+	 * Sets the ISBN of the book.
+	 * 
 	 * @param isbn Sets the ISBN
 	 */
 	public void setIsbn(String isbn) {
@@ -55,6 +58,8 @@ public class Book {
 	}
 
 	/**
+	 * Gets the call number of the book.
+	 * 
 	 * @return the callNumber
 	 */
 	public String getCallNumber() {
@@ -62,6 +67,8 @@ public class Book {
 	}
 
 	/**
+	 * Sets the call number of the book.
+	 * 
 	 * @param callNumber the callNumber to set
 	 */
 	public void setCallNumber(String callNumber) {
@@ -69,6 +76,8 @@ public class Book {
 	}
 
 	/**
+	 * Gets the total number of books.
+	 * 
 	 * @return the total
 	 */
 	public int getTotal() {
@@ -76,6 +85,8 @@ public class Book {
 	}
 
 	/**
+	 * Sets the total number of books.
+	 * 
 	 * @param total the total to set
 	 */
 	public void setTotal(int total) {
@@ -83,6 +94,8 @@ public class Book {
 	}
 
 	/**
+	 * Gets the title of the book.
+	 * 
 	 * @return the title
 	 */
 	public String getTitle() {
@@ -90,6 +103,8 @@ public class Book {
 	}
 
 	/**
+	 * Sets the title of the book.
+	 * 
 	 * @param title the title to set
 	 */
 	public void setTitle(String title) {
@@ -97,19 +112,28 @@ public class Book {
 	}
 
 	/**
-	 * @return the available
+	 * Gets the number of available books.
+	 * 
+	 * @return available The number of books available.
 	 */
 	public int getAvailable() {
 		return available;
 	}
 
 	/**
-	 * @param available the available to set
+	 * Sets the number of available books.
+	 * 
+	 * @param available the available books.
 	 */
 	public void setAvailable(int available) {
 		this.available = available;
 	}
 
+	/**
+	 * Returns a formatted output of the book info
+	 * 
+	 * @return Formated out put
+	 */
 	@Override
 	public String toString() {
 
