@@ -406,10 +406,7 @@ public class Driver {
 	 * @throws FileNotFoundException 
 	 */
 	public void saveBook() throws FileNotFoundException {
-		// get type of Book
-		// hello
 		String formated;
-		String title;
 		
 		File saveFile = new File(SAVEFILE); //a safe place to save the file
 		PrintWriter o = new PrintWriter(saveFile);
