@@ -20,8 +20,9 @@ public class Driver {
 	/**
 	 * Constructs the Driver, loads the array, displays the menu for the customer to
 	 * interact with
+	 * @throws FileNotFoundException 
 	 */
-	public Driver() {
+	public Driver() throws FileNotFoundException {
 		bookList = new ArrayList<Book>();
 		loadBooks();
 
@@ -193,8 +194,9 @@ public class Driver {
 	 * this displays the menu for the user to choose from
 	 * 
 	 * @author Robyn
+	 * @throws FileNotFoundException 
 	 */
-	public void displayMenu() {
+	public void displayMenu() throws FileNotFoundException {
 		/**
 		 * @param option           is selections made by user
 		 * @param isbnSelection    is the isbn entered by user
@@ -400,12 +402,16 @@ public class Driver {
 
 	/**
 	 * @author
+	 * @throws FileNotFoundException 
 	 */
-	public void saveBook() {
+	public void saveBook() throws FileNotFoundException {
 		// get type of Book
 		// hello
 		String formated;
 		String title;
+		
+		File saveFile = new File("res/savedfile.txt"); //a safe place to save the file
+		PrintWriter o = new PrintWriter(saveFile);
 
 		for (int i = 0; i < bookList.size(); i++) {
 			int type = bookType(bookList.get(i).getIsbn());
@@ -433,9 +439,10 @@ public class Driver {
 			default:
 				formated = "Null";
 			}
-			System.out.println(formated);
+			o.println(formated);
 		}
 
+		o.close();
 		// String for each book - 9791149311508;050;0;5;Men's Health;M
 
 		// wipe file
