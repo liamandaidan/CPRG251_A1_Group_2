@@ -1,9 +1,10 @@
 package problemdomain;
 
 /**
- * desc
+ * This class, inheriting from the Book class, is specifically for paperback books
+ * 
  * @author bdavi
- * @version 1.1
+ * @version 1.2
  * */
 public class PaperBack extends Book {
 	
@@ -18,11 +19,10 @@ public class PaperBack extends Book {
 	public PaperBack()
 	{
 		super();
-		// TODO Auto-generated constructor stub
 	}
 	
 	/**
-	 * desc
+	 * constructor calling the super as well as specific paperback parameters
 	 * @param isbn
 	 * @param callNumber
 	 * @param available

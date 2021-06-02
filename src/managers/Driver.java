@@ -307,7 +307,7 @@ public class Driver {
 	 * checks it out or displays an error message depending on availability
 	 * 
 	 * @author Benson
-	 * @param
+	 * @param isbn A string representing the isbn number of a book
 	 */
 	public void checkOutBook(String isbn) {
 
