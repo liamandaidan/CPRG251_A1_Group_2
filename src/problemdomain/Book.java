@@ -25,11 +25,11 @@ public class Book {
 	/**
 	 * Create a Book object with arguments.
 	 * todo more detail
-	 * @param isbn       of book is a String
-	 * @param callNumber is a String
-	 * @param available  is an int, with the number of books available
-	 * @param total      is an int
-	 * @param title      is an int
+	 * @param isbn       The ISBN of the Book
+	 * @param callNumber The Call number of the Book
+	 * @param available  How many books are avaliable
+	 * @param total      How many books there are in total
+	 * @param title      The name of the book
 	 */
 	public Book(String isbn, String callNumber, int available, int total, String title) {
 		this.isbn = isbn;
@@ -39,11 +39,8 @@ public class Book {
 		this.title = title;
 	}
 	
-	/**
-	 * Listed below are the getters and setters along with the toString method.
-	 */
 	
-	/**
+	/** 
 	 * @return Returns ISBN
 	 */
 	public String getIsbn() {
