@@ -4,7 +4,7 @@ package problemdomain;
  * This is the sub class for the Children book more specific type of book
  * 
  * @author mikepcann
- *
+ * @version
  */
 
 public class ChildrensBook extends Book {

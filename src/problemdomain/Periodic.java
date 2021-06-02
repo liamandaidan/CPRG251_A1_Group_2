@@ -1,7 +1,7 @@
 package problemdomain;
 
 /**
- * This is a test!
+ * change
  * 
  * @author liamm
  * @version 1.5 Change log: updated toString to display better.
@@ -17,6 +17,7 @@ public class Periodic extends Book {
 	}
 
 	/**
+	 * add desc
 	 * @param isbn of book is a String
 	 * @param callNumber is a String
 	 * @param available is an int, with the number of books available
@@ -28,7 +29,10 @@ public class Periodic extends Book {
 		super(isbn, callNumber, available, total, title);
 		this.frequency = frequency;
 	}
-
+	/**
+	 * 
+	 */
+	
 	/**
 	 * @return the frequency.
 	 */
