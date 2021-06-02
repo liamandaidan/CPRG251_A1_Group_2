@@ -131,6 +131,7 @@ public class Book {
 
 	/**
 	 * Returns a formatted output of the book info
+	 * 
 	 * @Override
 	 * @return Formated output
 	 */
