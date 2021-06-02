@@ -19,7 +19,6 @@ public class Book {
 	 */
 	public Book() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 	/**
 	 * @param isbn of book is a String
@@ -36,13 +35,13 @@ public class Book {
 		this.title = title;		
 	}
 	/**
-	 * @return the isbn
+	 * @return Returns ISBN
 	 */
 	public String getIsbn() {
 		return isbn;
 	}
 	/**
-	 * @param isbn the isbn to set
+	 * @param isbn Sets the ISBN
 	 */
 	public void setIsbn(String isbn) {
 		this.isbn = isbn;

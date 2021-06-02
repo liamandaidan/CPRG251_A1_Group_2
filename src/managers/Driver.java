@@ -9,7 +9,7 @@ import java.util.*;
  * The main part of the program to load, create, search, and process books
  * 
  * @author Liam, Robyn, Benson, Mike
- * @version 1.0
+ * @version June, 1, 2021
  * 
  */
 public class Driver {
@@ -399,11 +399,10 @@ public class Driver {
 	}
 
 	/**
-	 * @author
+	 * This function will saveBook to file.
+	 * @author Liam, Benson, Mike, Robyn
 	 */
 	public void saveBook() {
-		// get type of Book
-		// hello
 		String formated;
 		String title;
 
@@ -436,10 +435,6 @@ public class Driver {
 			System.out.println(formated);
 		}
 
-		// String for each book - 9791149311508;050;0;5;Men's Health;M
-
-		// wipe file
-		// printWrite to that books.txt
 	}
 
 	/**
