@@ -21,16 +21,20 @@ public class Driver {
 	/**
 	 * Constructs the Driver, loads the array, displays the menu for the customer to
 	 * interact with
-	 * @throws FileNotFoundException 
+	 * 
+	 * @throws FileNotFoundException
 	 */
 	public Driver() throws FileNotFoundException {
 		bookList = new ArrayList<Book>();
 		loadBooks();
 
-		// the following 4 lines are code testing the function of the checkOutBook method
-		// checkOutBook("9789560996916");//operating systems concepts has 5 available out of 8 to start
+		// the following 4 lines are code testing the function of the checkOutBook
+		// method
+		// checkOutBook("9789560996916");//operating systems concepts has 5 available
+		// out of 8 to start
 		// checkOutBook("9796356055276");//the great gatsby has 0 available out of 8
-		// checkOutBook("9792662264098");//Time magazine is a periodical and cannot be checked out
+		// checkOutBook("9792662264098");//Time magazine is a periodical and cannot be
+		// checked out
 		// checkOutBook("2387984712697");//testing an isbn that doesn't exist
 		displayMenu();
 
@@ -192,7 +196,7 @@ public class Driver {
 	 * this displays the menu for the user to choose from
 	 * 
 	 * @author Robyn
-	 * @throws FileNotFoundException 
+	 * @throws FileNotFoundException
 	 */
 	public void displayMenu() throws FileNotFoundException {
 		/**
@@ -329,7 +333,9 @@ public class Driver {
 	}
 
 	/**
-	 * This method takes a string ISBN, checks if the book exists, then either checks it out or displays an error message depending on availability
+	 * This method takes a string ISBN, checks if the book exists, then either
+	 * checks it out or displays an error message depending on availability
+	 * 
 	 * @author Benson
 	 */
 	public void checkOutBook(String isbn) {
@@ -401,14 +407,15 @@ public class Driver {
 
 	/**
 	 * This function will saveBook to file.
+	 * 
 	 * @author Liam, Benson, Mike, Robyn
 	 * @author
-	 * @throws FileNotFoundException 
+	 * @throws FileNotFoundException
 	 */
 	public void saveBook() throws FileNotFoundException {
 		String formated;
-		
-		File saveFile = new File(SAVEFILE); //a safe place to save the file
+
+		File saveFile = new File(SAVEFILE); // a safe place to save the file
 		PrintWriter o = new PrintWriter(saveFile);
 
 		for (int i = 0; i < bookList.size(); i++) {
@@ -420,10 +427,11 @@ public class Driver {
 						bookList.get(i).getTitle(), ((ChildrensBook) bookList.get(i)).getAuthors(),
 						((ChildrensBook) bookList.get(i)).getFormat());
 				break;
-			case 1: // CookBook 
+			case 1: // CookBook
 				formated = String.format("%s;%s;%d;%d;%s;%s;%c", bookList.get(i).getIsbn(),
 						bookList.get(i).getCallNumber(), bookList.get(i).getAvailable(), bookList.get(i).getTotal(),
-						bookList.get(i).getTitle(), ((CookBook)bookList.get(i)).getPublisher(), ((CookBook)bookList.get(i)).getDiet());
+						bookList.get(i).getTitle(), ((CookBook) bookList.get(i)).getPublisher(),
+						((CookBook) bookList.get(i)).getDiet());
 				break;
 			case 2: // PaperBack
 				formated = String.format("%s;%s;%s;%s;%s;%s;%s;%s", bookList.get(i).getIsbn(),
