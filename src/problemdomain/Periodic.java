@@ -3,7 +3,7 @@ package problemdomain;
 /**
  * Create a Periodic object that is a subclass of Book.
  * 
- * @author liamm
+ * @author Liam
  * @version June/2/2021
  */
 public class Periodic extends Book {
