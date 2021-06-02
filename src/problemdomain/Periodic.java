@@ -17,12 +17,12 @@ public class Periodic extends Book {
 	}
 
 	/**
-	 * @param isbn       of book.
-	 * @param callNumber of book.
-	 * @param available  of book.
-	 * @param total      of how many books are left.
-	 * @param title      of book.
-	 * @param frequency  of book.
+	 * @param isbn of book is a String
+	 * @param callNumber is a String
+	 * @param available is an int, with the number of books available
+	 * @param total is an int
+	 * @param title is an int
+	 * @param frequency of the book as a Char
 	 */
 	public Periodic(String isbn, String callNumber, int available, int total, String title, char frequency) {
 		super(isbn, callNumber, available, total, title);
