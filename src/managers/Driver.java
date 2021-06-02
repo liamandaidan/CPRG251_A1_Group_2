@@ -14,12 +14,8 @@ import java.util.*;
  */
 public class Driver {
 
-<<<<<<< HEAD
 	private final String FILEPATH = "res/books.txt";
 	private final String SAVEFILE = "res/savedfile.txt";
-=======
-	private static final String FILEPATH = "res/books.txt";
->>>>>>> c8a67c8d48f2b9ecf31031af65a73d10a98cd8f2
 	private ArrayList<Book> bookList;
 
 	/**
