@@ -423,8 +423,10 @@ public class Driver {
 						bookList.get(i).getTitle(), ((ChildrensBook) bookList.get(i)).getAuthors(),
 						((ChildrensBook) bookList.get(i)).getFormat());
 				break;
-			case 1: // CookBook @benson
-				formated = String.format("%s;%s;%s;%s;", null);
+			case 1: // CookBook 
+				formated = String.format("%s;%s;%d;%d;%s;%s;%c", bookList.get(i).getIsbn(),
+						bookList.get(i).getCallNumber(), bookList.get(i).getAvailable(), bookList.get(i).getTotal(),
+						bookList.get(i).getTitle(), ((CookBook)bookList.get(i)).getPublisher(), ((CookBook)bookList.get(i)).getDiet());
 				break;
 			case 2: // PaperBack
 				formated = String.format("%s;%s;%s;%s;%s;%s;%s;%s", bookList.get(i).getIsbn(),
