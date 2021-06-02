@@ -195,42 +195,42 @@ public class Driver {
 
 		System.out.printf("Welcome to the ABC Book Company: How may we assist you?%n" + "1. Checkout Book%n"
 				+ "2. Find Books by Title%n" + "3. Display Books by Type%n" + "4. Produce Random Book List%n"
-				+ "5. Save & Exit%n%n");
+				+ "5. Save & Exit%n%n"); //prints display menu
 
 		System.out.printf("Enter option: ");
-		option = in.nextLine();
+		option = in.nextLine(); //reads user option entered
 
 		while (!option.equals("5")) {
 			switch (option) {
 			case "1":
 				System.out.printf("Enter the ISBN of book: ");
 				isbnSelection = in.nextLine();
-				checkOutBook(isbnSelection);
+				checkOutBook(isbnSelection);//checks out book using isbn
 				break;
 			case "2":
 				System.out.printf("Enter the title to search for: ");
 				bookTitle = in.nextLine();
-				findBookTitle(bookTitle);
+				findBookTitle(bookTitle); //displays book title 
 				break;
 			case "3":
 				System.out.printf("#  Type%n" + "1. Children's Books%n" + "2. CookBooks%n" + "3. Paperbacks%n"
 						+ "4. Periodicals%n%n");
-				System.out.printf("Enter type of book: ");
+				System.out.printf("Enter type of book: "); 
 
 				displayBookOfType = in.nextLine();
 				if ("1234".contains(displayBookOfType)) {
-					typeOfBook = Integer.parseInt(displayBookOfType);
+					typeOfBook = Integer.parseInt(displayBookOfType); 
 					if (typeOfBook == 4) {
 						System.out.printf("%nEnter a frequency (D for Daily, W for Weekly, "
 								+ "M for Monthly, B for Biweekly, or Q for Quarterly): ");
 						freqSelected = in.nextLine().charAt(0);
-						showBookType(typeOfBook, freqSelected); // displayFrequency method needed!
+						showBookType(typeOfBook, freqSelected); // displays periodic book details
 					} else {
-						showBookType(typeOfBook);
+						showBookType(typeOfBook); //displays book details (cook book, children's book, and paperbacks)
 					}
 					break;
 				} else {
-					System.out.println("Enter a valid book type (1-4):\n");
+					System.out.println("Enter a valid book type (1-4):\n"); 
 					continue;
 				}
 			case "4":
@@ -238,7 +238,7 @@ public class Driver {
 				try {
 					numOfRandomBooks = Integer.parseInt(in.nextLine());
 					if (numOfRandomBooks <= 50 && numOfRandomBooks >= 0) {
-						produceRandomBookList(numOfRandomBooks);
+						produceRandomBookList(numOfRandomBooks); //displays list of random books
 					} else {
 						System.out.println("Wrong user Input. Please use an appropriate number from 1-50.");
 						continue;
@@ -262,7 +262,7 @@ public class Driver {
 
 			option = in.nextLine();
 		}
-		saveBook();
+		saveBook(); //saves books
 		in.close();
 	}
 

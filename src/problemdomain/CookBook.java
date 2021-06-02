@@ -1,7 +1,9 @@
 package problemdomain;
 /**
+ * 
+ *	this is a sub class for the Cook Book 
  * @author Robyn
- * @version 05/28/21
+ * @version 06/02/2021
  */
 public class CookBook extends Book {
 
@@ -61,7 +63,11 @@ public class CookBook extends Book {
 	public void setDiet(char diet) {
 		this.diet = diet;
 	}
-	@Override
+	/**
+	 * @return cook book details and book details toString
+	 * @override
+	 */
+	
 	public String toString() {
 		String dietName;
 		switch(this.diet) {
