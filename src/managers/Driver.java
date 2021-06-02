@@ -27,24 +27,7 @@ public class Driver {
 	public Driver() throws FileNotFoundException {
 		bookList = new ArrayList<Book>();
 		loadBooks();
-
-		// the following 4 lines are code testing the function of the checkOutBook
-		// method
-		// checkOutBook("9789560996916");//operating systems concepts has 5 available
-		// out of 8 to start
-		// checkOutBook("9796356055276");//the great gatsby has 0 available out of 8
-		// checkOutBook("9792662264098");//Time magazine is a periodical and cannot be
-		// checked out
-		// checkOutBook("2387984712697");//testing an isbn that doesn't exist
 		displayMenu();
-
-		// The follow code is to test that all of the books were added
-		// can be removed!!!!
-		/*
-		 * for(Book b: bookList){ System.out.println(b.getTitle()); }
-		 * System.out.println(bookList.size());
-		 */
-
 	}
 
 	/**
@@ -70,13 +53,13 @@ public class Driver {
 					createChildrensBook(entry); // creates a Childrensbook and adds it to the array
 					break;
 				case 1:
-					createCookBook(entry); // creates a Cook book and adds it to the array
+					createCookBook(entry);
 					break;
 				case 2:
-					createPaperbackBook(entry); // creates a PaperBack and adds it to the array
+					createPaperbackBook(entry);
 					break;
 				case 3:
-					createPeriodical(entry); // creates a Periodical and adds it to the array
+					createPeriodical(entry);
 					break;
 				case -1:
 					System.out.println("No book created");
@@ -199,16 +182,6 @@ public class Driver {
 	 * @throws FileNotFoundException
 	 */
 	public void displayMenu() throws FileNotFoundException {
-		/**
-		 * @param option           is selections made by user
-		 * @param isbnSelection    is the isbn entered by user
-		 * @param bookTitle        is the title of the book the user searches for
-		 * @param typeOfBook       is the type of book the user enters
-		 * @param numOfRandomBooks is the number of books the user wants to randomly
-		 *                         display
-		 * @param freqSelected     is the frequency of the periodic book the user enters
-		 * 
-		 */
 
 		String option;
 		String isbnSelection;
@@ -300,7 +273,6 @@ public class Driver {
 	 * @author Liam
 	 * @param typeOfBook 1 for childernsBook, 2 for cookBook, 3 for paperback, 4 for
 	 *                   Periodic
-	 * @version 1.0
 	 */
 	private void showBookType(int typeOfBook) {
 		for (int i = 0; i < bookList.size(); i++) {
@@ -318,10 +290,8 @@ public class Driver {
 	 * @author Liam
 	 * @param typeOfBook   Integer being 4 for Periodic
 	 * @param freqSelected Char D, W, M, B, Q
-	 * @version 1.0
 	 */
 	private void showBookType(int typeOfBook, char freqSelected) {
-		// we are going to print all periodic then print all freqSelected
 		final int PERIODIC = 3;
 		for (int i = 0; i < bookList.size(); i++) {
 			if (PERIODIC == bookType(bookList.get(i).getIsbn())) { // 3=Periodic
@@ -337,6 +307,7 @@ public class Driver {
 	 * checks it out or displays an error message depending on availability
 	 * 
 	 * @author Benson
+	 * @param
 	 */
 	public void checkOutBook(String isbn) {
 
@@ -345,11 +316,9 @@ public class Driver {
 				String bookCode = theBook.getIsbn();
 				if (bookCode.equals(isbn)) {
 					if (bookType(bookCode) != 3) {
-						/* test code */// System.out.println(theBook.toString());
 						if (theBook.getAvailable() >= 1) {
 							theBook.setAvailable(theBook.getAvailable() - 1);
 							System.out.println("Book checked out successfully. Enjoy your reading!");
-							/* test code */// System.out.println(theBook.toString());
 						} else {
 							System.out.println(
 									"Sorry, there are no more copies of this book available to check out. Please try another book.");
@@ -371,13 +340,10 @@ public class Driver {
 	 * 
 	 * @author Liam
 	 * @param title name to search bookList with.
-	 * @version 1.6
 	 */
 	public void findBookTitle(String title) {
-		// find error case of title not matching
 		boolean match = false;
 		for (int i = 0; i < bookList.size(); i++) {
-			// The line below contains the issue to fix
 			// Find text with Contains OR find text with the full title
 			if (bookList.get(i).getTitle().toLowerCase().contains(title.toLowerCase())
 					|| bookList.get(i).getTitle().toLowerCase().equals(title.toLowerCase())) {
@@ -395,7 +361,6 @@ public class Driver {
 	 * 
 	 * @author Liam
 	 * @param numOfbooks this will take in the number of books from user.
-	 * @version 1.2
 	 * 
 	 */
 	public void produceRandomBookList(int numOfBooks) {
@@ -409,13 +374,12 @@ public class Driver {
 	 * This function will saveBook to file.
 	 * 
 	 * @author Liam, Benson, Mike, Robyn
-	 * @author
 	 * @throws FileNotFoundException
 	 */
 	public void saveBook() throws FileNotFoundException {
 		String formated;
 
-		File saveFile = new File(SAVEFILE); // a safe place to save the file
+		File saveFile = new File(SAVEFILE); // Replace later!
 		PrintWriter o = new PrintWriter(saveFile);
 
 		for (int i = 0; i < bookList.size(); i++) {
@@ -459,17 +423,15 @@ public class Driver {
 	 * 
 	 * @author Benson
 	 * 
-	 * @param String
+	 * @param isbn
 	 * @return boolean
 	 */
 	public boolean bookExists(String isbn) {
 		for (int i = 0; i < bookList.size(); i++) {
 			if (bookList.get(i).getIsbn().equals(isbn)) {
-				/* test line */// System.out.println("true");
 				return true;
 			}
 		}
-		/* test line */// System.out.println("false");
 		return false;
 	}
 

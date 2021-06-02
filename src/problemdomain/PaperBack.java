@@ -1,6 +1,7 @@
 package problemdomain;
 
 /**
+ * desc
  * @author bdavi
  * @version 1.1
  * */
@@ -21,6 +22,7 @@ public class PaperBack extends Book {
 	}
 	
 	/**
+	 * desc
 	 * @param isbn
 	 * @param callNumber
 	 * @param available
