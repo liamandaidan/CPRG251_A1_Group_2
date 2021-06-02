@@ -15,6 +15,7 @@ import java.util.*;
 public class Driver {
 
 	private final String FILEPATH = "res/books.txt";
+	private final String SAVEFILE = "res/savedfile.txt";
 	private ArrayList<Book> bookList;
 
 	/**
@@ -410,7 +411,7 @@ public class Driver {
 		String formated;
 		String title;
 		
-		File saveFile = new File("res/savedfile.txt"); //a safe place to save the file
+		File saveFile = new File(SAVEFILE); //a safe place to save the file
 		PrintWriter o = new PrintWriter(saveFile);
 
 		for (int i = 0; i < bookList.size(); i++) {

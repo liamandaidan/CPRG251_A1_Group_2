@@ -1,5 +1,5 @@
 9791149311508;050;0;5;Men's Health;M;
-9795804215224;813.52 STE;0;6;Of Mice and Men;John Steinbeck;1937;D
+9795804215224;813.52 STE;3;6;Of Mice and Men;John Steinbeck;1937;D
 null;null;null;null;
 9793906396384;813.3 MEL;3;5;Moby-Dick;Herman Melville;1851;A
 9797641065604;301;3;8;Sociology (9th edition);John J. Macionis, Linda M. Gerber;2017;E
@@ -72,4 +72,4 @@ null;null;null;null;
 9788894437768;051;0;5;National Geographic;M;
 null;null;null;null;
 9787376373648;051;0;5;Vogue;M;
-9797028940715;843.912;3;5;The Little Prince;Antoine de Saint-Exupery;1943;F
+9797028940715;843.912;0;5;The Little Prince;Antoine de Saint-Exupery;1943;F
