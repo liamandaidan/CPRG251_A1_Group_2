@@ -27,7 +27,7 @@ public class Book {
 	 * 
 	 * @param isbn       The ISBN of the Book
 	 * @param callNumber The Call number of the Book
-	 * @param available  How many books are avaliable
+	 * @param available  How many books are available
 	 * @param total      How many books there are in total
 	 * @param title      The name of the book
 	 */
@@ -131,6 +131,7 @@ public class Book {
 
 	/**
 	 * Returns a formatted output of the book info
+	 * 
 	 * @Override
 	 * @return Formated output
 	 */

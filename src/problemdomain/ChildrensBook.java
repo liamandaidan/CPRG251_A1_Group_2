@@ -13,22 +13,22 @@ public class ChildrensBook extends Book {
 	private char format;
 
 	/**
-	 * constructs the children book no-arg object
+	 * The no argument constructor for ChildrensBook
 	 */
 	public ChildrensBook() {
 		super();
 	}
 
 	/**
-	 * constructs the Childrens book from the Super Class
+	 * constructs the Children's book from the Super Class
 	 * 
-	 * @param isbn       unique number for the book
-	 * @param callNumber Call number of the book
-	 * @param available  The number of books available
-	 * @param total      The total number of books
-	 * @param title      The title of the book
-	 * @param authors    the authors of the book
-	 * @param format     The type of childrens book
+	 * @param isbn          The ISBN of the Book
+	 * @param callNumberThe Call number of the Book
+	 * @param available     The number of books available
+	 * @param total         The total number of books
+	 * @param title         The title of the book
+	 * @param authors       the authors of the book
+	 * @param format        The type of children's book
 	 */
 	public ChildrensBook(String isbn, String callNumber, int available, int total, String title, String authors,
 			char format) {
@@ -38,7 +38,7 @@ public class ChildrensBook extends Book {
 	}
 
 	/**
-	 * Gets the author of the book
+	 * Gets the author of the book.
 	 * 
 	 * @return the authors
 	 */
@@ -47,9 +47,9 @@ public class ChildrensBook extends Book {
 	}
 
 	/**
-	 * Sets the author of the book
+	 * Sets the author of the book.
 	 * 
-	 * @param authors the authors to set
+	 * @param authors the authors of the book.
 	 */
 	public void setAuthors(String authors) {
 		this.authors = authors;
@@ -59,22 +59,27 @@ public class ChildrensBook extends Book {
 	 * Gets the type of book p = Picture book, e = Early Readers, or c= Chapter
 	 * book.
 	 * 
-	 * @return the format
+	 * @return the format of the book.
 	 */
 	public char getFormat() {
 		return format;
 	}
 
 	/**
-	 * sets the format of the book
+	 * Sets the format of the book.
 	 * 
-	 * @param format the format to set
+	 * @param format the format of the book.
 	 */
 	public void setFormat(char format) {
 		this.format = format;
 	}
 
-	@Override
+	/**
+	 * Formats the output of the children's book info.
+	 * 
+	 * @Override
+	 * @return Formatted output of the book info
+	 */
 	public String toString() {
 		String formatType;
 		switch (this.format) {
