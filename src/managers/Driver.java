@@ -182,7 +182,7 @@ public class Driver {
 	 * @throws FileNotFoundException
 	 */
 	public void displayMenu() throws FileNotFoundException {
-
+		final String BOOK_KEY = "1234";
 		String option;
 		String isbnSelection;
 		String bookTitle;
@@ -218,7 +218,8 @@ public class Driver {
 				System.out.printf("Enter type of book: ");
 
 				displayBookOfType = in.nextLine();
-				if ("1234".contains(displayBookOfType)) {
+				
+				if (BOOK_KEY.contains(displayBookOfType)&&displayBookOfType.length()==1) {
 					typeOfBook = Integer.parseInt(displayBookOfType);
 					if (typeOfBook == 4) {
 						System.out.printf("%nEnter a frequency (D for Daily, W for Weekly, "
