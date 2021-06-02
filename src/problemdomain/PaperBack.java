@@ -82,7 +82,11 @@ public class PaperBack extends Book {
 	{
 		this.genre = genre;
 	}
-	@Override
+	/**
+	* @Override
+	* method to override default toString method. Does a check to determine book genre, then prints the superclass' toString method and adds
+	* the paperback-specific attributes to it, including the genre type
+	*/
 	public String toString()
 	{
 		String genreType;
