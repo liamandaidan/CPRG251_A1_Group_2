@@ -361,7 +361,7 @@ public class Driver {
 	 * Method will grab x random books from user and display random books.
 	 * 
 	 * @author Liam
-	 * @param numOfbooks this will take in the number of books from user.
+	 * @param numOfBooks this will take in the number of books from user.
 	 * 
 	 */
 	public void produceRandomBookList(int numOfBooks) {
