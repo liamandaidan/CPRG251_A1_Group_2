@@ -31,8 +31,8 @@ public class CookBook extends Book {
 		this.diet = diet;
 	}
 	/**
-	 * @param publisher
-	 * @param diet
+	 * @param publisher is the publisher of the book
+	 * @param diet is the diet type the cookbook covers
 	 */
 	public CookBook(String publisher, char diet) {
 		super();

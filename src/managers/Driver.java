@@ -424,7 +424,7 @@ public class Driver {
 	 * 
 	 * @author Benson
 	 * 
-	 * @param isbn
+	 * @param isbn to check if book exists
 	 * @return boolean
 	 */
 	public boolean bookExists(String isbn) {
