@@ -15,7 +15,6 @@ import java.util.*;
 public class Driver {
 
 	private final String FILEPATH = "res/books.txt";
-	private final String SAVEFILE = "res/savedfile.txt";
 	private ArrayList<Book> bookList;
 
 	/**
@@ -380,7 +379,7 @@ public class Driver {
 	public void saveBook() throws FileNotFoundException {
 		String formated;
 
-		File saveFile = new File(SAVEFILE); // Replace later!
+		File saveFile = new File(FILEPATH); 
 		PrintWriter o = new PrintWriter(saveFile);
 
 		for (int i = 0; i < bookList.size(); i++) {
