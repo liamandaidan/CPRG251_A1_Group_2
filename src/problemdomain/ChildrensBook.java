@@ -23,7 +23,7 @@ public class ChildrensBook extends Book {
 	 * constructs the Children's book from the Super Class
 	 * 
 	 * @param isbn          The ISBN of the Book
-	 * @param callNumberThe Call number of the Book
+	 * @param callNumber	The Call number of the Book
 	 * @param available     The number of books available
 	 * @param total         The total number of books
 	 * @param title         The title of the book
