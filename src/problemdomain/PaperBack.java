@@ -23,14 +23,14 @@ public class PaperBack extends Book {
 	
 	/**
 	 * constructor calling the super as well as specific paperback parameters
-	 * @param isbn
-	 * @param callNumber
-	 * @param available
-	 * @param total
-	 * @param title
-	 * @param authors
-	 * @param year
-	 * @param genre
+	 * @param isbn the isbn of the book 
+	 * @param callNumber used to find location of book 
+	 * @param available are copies of the book available to check out
+	 * @param total is the total of books of the each type
+	 * @param title is the title of the book
+	 * @param authors is the author of the book
+	 * @param year is the year the book was published
+	 * @param genre is the genre of the book
 	 */
 	public PaperBack(String isbn, String callNumber, int available, int total, String title, String authors, int year, char genre)
 	{

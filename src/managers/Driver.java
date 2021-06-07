@@ -15,7 +15,6 @@ import java.util.*;
 public class Driver {
 
 	private final String FILEPATH = "res/books.txt";
-	private final String SAVEFILE = "res/savedfile.txt";
 	private ArrayList<Book> bookList;
 
 	/**
@@ -361,7 +360,7 @@ public class Driver {
 	 * Method will grab x random books from user and display random books.
 	 * 
 	 * @author Liam
-	 * @param numOfbooks this will take in the number of books from user.
+	 * @param numOfBooks this will take in the number of books from user.
 	 * 
 	 */
 	public void produceRandomBookList(int numOfBooks) {
@@ -380,7 +379,7 @@ public class Driver {
 	public void saveBook() throws FileNotFoundException {
 		String formated;
 
-		File saveFile = new File(SAVEFILE); // Replace later!
+		File saveFile = new File(FILEPATH); 
 		PrintWriter o = new PrintWriter(saveFile);
 
 		for (int i = 0; i < bookList.size(); i++) {
@@ -424,7 +423,7 @@ public class Driver {
 	 * 
 	 * @author Benson
 	 * 
-	 * @param isbn
+	 * @param isbn to check if book exists
 	 * @return boolean
 	 */
 	public boolean bookExists(String isbn) {
